@@ -398,6 +398,12 @@ img{
     margin-bottom: 25px;
   }
 
+  .phoenix-sidebar .widget-title{
+    background-color: #e5007d;
+    color: #fff;
+    padding: 0 10px;
+  }
+
   .phoenix-sidebar .widget_custom_lpw_latest_posts img{
     max-width: 100%;
     height: auto;
@@ -532,6 +538,26 @@ img{
 
   #individual-article p{
     font-size: 16px;
+  }
+
+  #individual-content h1{
+    color: #e5007d;
+    font-weight: 800;
+  }
+
+  #individual-content h2{
+    color: #00AFF1;
+    font-weight: 800;
+  }
+
+  #individual-content h3{
+    color: #51b847;
+    font-weight: 800;
+  }
+
+  #individual-content h4{
+    color: #706f6f;
+    font-weight: 800;
   }
 
   #individual-article img{
@@ -688,6 +714,14 @@ img{
   }
 
   /* Search */
+
+  .search-title span{
+    background-color: #e5007d;
+    padding: 0 20px;
+    color: #fff;
+    background-clip: border-box;
+    margin: 24.9px 0;
+  }
 
   #search-results .cover-date {
   margin-bottom: 3px;

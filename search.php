@@ -15,11 +15,8 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'phoenix' ), '<span>' . get_search_query() . '</span>' );
-					?>
+				<h1 class="search-title">
+					<span>Resultados de la búsqueda para <?php echo get_search_query(); ?></span>
 				</h1>
 		
 			<?php 
@@ -27,13 +24,15 @@ get_header();
 				$i = 0; //Contador de filas .row divs
 
 				echo '<div class="row home-blog">';
+
 					echo '<div id="search-sideon" class="col-md-9 d-none d-lg-block">';
 					echo '<div class="row home-blog">';
 
 				    /* Loop */
 				    while ( have_posts() ) : the_post();
 				    	
-				        echo '<div class="single-article col-lg-' . 12 / $columns_num . '">';
+				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
+				        //echo '<div class="single-article col-lg-' . 12 / $columns_num . '">';
 
 				            get_template_part( 'template-parts/content', 'archive' );
 				            	
