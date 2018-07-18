@@ -16,7 +16,7 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 				<h1 class="search-title">
-					<span>Resultados de la búsqueda para <?php echo get_search_query(); ?></span>
+					<span>Resultados de la búsqueda para <b><?php echo get_search_query(); ?></b></span>
 				</h1>
 		
 			<?php 

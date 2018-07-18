@@ -9,15 +9,15 @@
 
 ?>
 <div class="row individual-intro">
-  <div class="col-xl-auto">
-    <h1 class="individual-title"><?php the_title(); ?></h1>
-    <h4 class="individual-date"><?php the_date('d.m.Y') ?> | <strong>Por</strong> <?php the_author(); ?></h4>
+  <div class="col-xl-9">
+    <h1 class="individual-title"><span><?php the_title(); ?></span></h1>
+    <h4 class="individual-date"><span><?php the_date('d.m.Y') ?> | <strong>Por</strong> <?php the_author(); ?></span></h4>
   </div>
 </div>
 <div class="row single-content">
   <div class="col-lg-9">
     <div class="row">
-      <div class="col-lg-12"><!--<img class="img-fluid individual-cover" src="images/placeholder-cover.jpg"/>-->
+      <div class="col-lg-12">
         <div id="individual-content">
           <?php the_content(); ?>
         </div>

@@ -578,6 +578,10 @@ img{
     line-height: 1.35;
   }
 
+  .individual-title span{
+    background-color: #00AFF1;
+  }
+
   .individual-intro{
     margin-top: 35px;
   }
@@ -585,7 +589,13 @@ img{
   .individual-date {
     margin-top: 10px;
     margin-bottom: 25px;
-    color: #e5007d; }
+
+    color: #fff; }
+
+  .individual-date span{
+    background-color: #e5007d;
+    padding: 0 20px;
+  }
 
   #individual-content .post-video-container{
     position: relative;
