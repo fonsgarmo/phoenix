@@ -589,7 +589,6 @@ img{
   .individual-date {
     margin-top: 10px;
     margin-bottom: 25px;
-
     color: #fff; }
 
   .individual-date span{
@@ -650,15 +649,18 @@ img{
       /* Archivo */
 
   .archive-title{
-    padding-left: 20px;
-    padding-right: 20px;
     color: #fff;
+  }
+
+  .archive-title span{
     background-color: #e5007d;
+    padding: 0 20px;
     background-clip: border-box;
   }
 
   .archive-pagination{
-    margin-top: -50px;
+    /*margin-top: -50px;*/
+    border-top: 3px solid #e0e0e0;
   }
 
   .archive-nav{
@@ -746,7 +748,8 @@ img{
   }
 
   .search-pagination{
-    margin-top: -50px;
+    /*margin-top: -50px;*/
+    border-top: 3px solid #e0e0e0;
   }
 
   /* Media querys WP */

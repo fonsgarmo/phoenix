@@ -18,8 +18,8 @@ get_header();
 	<section id="archive">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-auto">
-					<h1 class="archive-title"><?php the_archive_title(); ?></h1>
+				<div class="col-md-9">
+					<h1 class="archive-title"><span><?php the_archive_title(); ?></span></h1>
 				</div>
 			</div>
 			
@@ -86,10 +86,10 @@ get_header();
 		 ?>
 
 		 <div class="row archive-pagination">
-		 	<div class="col-md-4 offset-md-4">
-		 		<div class="archive-nav"><?php previous_posts_link( '« Anterior' ); ?>
-		 		<?php next_posts_link( 'Siguiente »' ); ?></div>
-			</div>
+			 	<div class="col-md-4 offset-md-4">
+			 		<div class="archive-nav"><?php previous_posts_link( '« Anterior' ); ?>
+			 		<?php next_posts_link( 'Siguiente »' ); ?></div>
+				</div>
 		 </div>
 	</div>
 </section>

@@ -20,6 +20,7 @@
 			?>
 
 			<h3>Lo sentimos, pero no hemos podido encontrar lo que buscas. Utiliza otros términos de búsqueda e inténtalo de nuevo.</h3>
+			
 			<?php
 
 		else :

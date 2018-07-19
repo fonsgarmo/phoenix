@@ -14,11 +14,11 @@ get_header();
 		<div class="row">
 
 		<?php if ( have_posts() ) : ?>
-
-				<h1 class="search-title">
-					<span>Resultados de la búsqueda para <b><?php echo get_search_query(); ?></b></span>
-				</h1>
-		
+				<div class="col-xl-9">
+					<h1 class="search-title">
+						<span>Resultados de la búsqueda para <b><?php echo get_search_query(); ?></b></span>
+					</h1>
+				</div>
 			<?php 
 			$columns_num = 2; // Columnas a mostrar
 				$i = 0; //Contador de filas .row divs
