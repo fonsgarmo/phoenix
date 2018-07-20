@@ -21,6 +21,9 @@
         <div id="individual-content">
           <?php the_content(); ?>
         </div>
+        <div class="single-categories">
+          <h4><span>Publicado en: <?php the_category(', '); ?></span></h4>
+        </div>
       <div class="single-comments">
         <?php if ( comments_open() || get_comments_number() ) :
         comments_template(); 

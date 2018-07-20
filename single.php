@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<section id="individual-article">
+	<section id="individual-article <?php the_ID(); ?>" <?php post_class(); ?>>
 	      <div class="container">
 
 		<?php
