@@ -29,7 +29,7 @@ get_header();
 
 
 		</div><!-- Container end -->
-	</div><
+	</div>
 
 <?php
 get_footer();

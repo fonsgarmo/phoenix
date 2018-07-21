@@ -44,8 +44,8 @@
 		  <?php if ( get_field( 'logotipo_footer', 'option' ) ) { ?>
 		  <div class="col-md-12 text-center"><img class="img-fluid footer-logo" src="<?php the_field( 'logotipo_footer', 'option' ); ?>" alt="Isotipo de pekesims blanco"/>
 		  <?php } ?>
-		    <p class="footer-copy">© 2007 - <?php echo date('Y'); ?> | Todos los derechos reservados</p>
-		    <p class="footer-copy">Diseño web y desarrollo <a href="http://agdesign.es"> AG Design</a> | Phoenix v. 0.8-alpha</p>
+		    <p class="footer-copy">© 2007 - <?php echo date('Y'); ?> | Todos los derechos reservados | Esta web no está afiliada con EA. Las marcas nombradas pertenecen a sus respectivos dueños.</p>
+		    <p class="footer-copy">Diseño web y desarrollo <a href="http://agdesign.es"> AG Design</a></p>
 		  </div>
 		</div>
 		</div>
