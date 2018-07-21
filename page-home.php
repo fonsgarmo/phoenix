@@ -29,7 +29,7 @@ get_header();
 	      <div class="hover-featured">
 	      	<?php $enlace_1 = get_sub_field( 'enlace_1' ); ?>
 	      	<?php if ( $enlace_1 ) { ?>
-	        <div class="featured-text"><a href="<?php echo $enlace_1; ?>">>
+	        <div class="featured-text"><a href="<?php echo $enlace_1; ?>">
 	            <h2><?php the_sub_field( 'titulo_1' ); ?></h2></a>
 	        <?php } ?>
 	        </div>
@@ -64,7 +64,7 @@ get_header();
 	      <div class="hover-featured">
 	        <?php $enlace_3 = get_sub_field( 'enlace_3' ); ?>
 	      	<?php if ( $enlace_3 ) { ?>
-	        <div class="featured-text"><a href="<?php echo $enlace_3; ?>">>
+	        <div class="featured-text"><a href="<?php echo $enlace_3; ?>">
 	            <h2><?php the_sub_field( 'titulo_3' ); ?></h2></a>
 	        <?php } ?>
 	        </div>
@@ -78,7 +78,7 @@ get_header();
 	      <div class="hover-featured">
 	        <?php $enlace_4 = get_sub_field( 'enlace_4' ); ?>
 	      	<?php if ( $enlace_4 ) { ?>
-	        <div class="featured-text"><a href="<?php echo $enlace_4; ?>">>
+	        <div class="featured-text"><a href="<?php echo $enlace_4; ?>">
 	            <h2><?php the_sub_field( 'titulo_4' ); ?></h2></a>
 	        <?php } ?>
 	        </div>
@@ -96,7 +96,10 @@ get_header();
 	<div class="row home-strip">
 		<div class="col-8 offset-2">
 			<h3 class="text-center"><?php the_sub_field( 'titulo' ) ?></h3>
-			<a href="<?php the_sub_field( 'enlace' ); ?>"><h4 class="text-center">Saber más >></h4></a>
+			<?php $enlace = get_sub_field( 'enlace' ); ?>
+			<?php if ( $enlace ) { ?>
+			<a href="<?php echo $enlace; ?>"><h4 class="text-center">Saber más <span class="icon-arrow-right"></span></h4></a>
+			<?php } ?>
 		</div>
 	</div>
 	<?php endwhile; ?>
