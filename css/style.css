@@ -426,6 +426,7 @@ img{
     overflow: auto;
     height: 100%;
     max-width: 285px;
+    background-color: #fff;
   }
 
   .widget-area img{
@@ -436,6 +437,15 @@ img{
   .phoenix-sidebar .widget-title{
     font-weight: 800;
     font-size: 22px;
+  }
+
+  .mailchimp-title{
+    color: #fff;
+  }
+
+  .mailchimp-title span{
+    background-color: #e5007d;
+    padding: 0 10px;
   }
 
   .sk-list{
@@ -451,7 +461,7 @@ img{
   }
 
   .current-menu-item a{
-    color: #e5007d;
+    color: #e5007d !important;
   }
 
   .sub-menu{
@@ -610,26 +620,8 @@ img{
     padding: 0 20px;
   }
 
-  #individual-content .post-video-container{
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-    margin: 0 50px 0 0;
-    clear: both;
-  }
-
-  #individual-content .post-video-container iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   #individual-content img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
 

@@ -4,8 +4,6 @@ $(document).ready(function(){
         $('.mobile-menu').toggleClass('open');
     });
 
-    $("#individual-article iframe").wrap("<div class='post-video-container'/>");
-
     $( "li.menu-item" ).hover(function() {  // mouse enter
     $( this ).find( " > .sub-menu" ).show(); // display immediate child
 

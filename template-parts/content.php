@@ -18,7 +18,7 @@
   <div class="col-lg-9">
     <div class="row">
       <div class="col-lg-12">
-        <div id="individual-content">
+        <div id="individual-content" class="post-content">
           <?php the_content(); ?>
         </div>
         <div class="single-categories">

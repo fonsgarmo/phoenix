@@ -27,8 +27,11 @@ get_header();
 	    <div class="feat-article"><img class="img-fluid feat-img" src="<?php the_sub_field( 'imagen_1' ); ?>" alt="<?php the_sub_field( 'titulo_1' ); ?>"/>
 	    <?php } ?>
 	      <div class="hover-featured">
-	        <div class="featured-text"><a href="<?php the_sub_field( 'enlace_1' ); ?>">
+	      	<?php $enlace_1 = get_sub_field( 'enlace_1' ); ?>
+	      	<?php if ( $enlace_1 ) { ?>
+	        <div class="featured-text"><a href="<?php echo $enlace_1; ?>">>
 	            <h2><?php the_sub_field( 'titulo_1' ); ?></h2></a>
+	        <?php } ?>
 	        </div>
 	      </div>
 	    </div>
@@ -37,9 +40,12 @@ get_header();
 	  	<?php if ( get_sub_field( 'imagen_2' ) ) { ?>
 	    <div class="feat-article"><img class="img-fluid feat-img" src="<?php the_sub_field( 'imagen_2' ); ?>" alt="<?php the_sub_field( 'titulo_2' ); ?>"/>
 	    <?php } ?>
-	      <div class="hover-featured">
-	        <div class="featured-text"><a href="<?php the_sub_field( 'enlace_2' ); ?>">
-	          <h2><?php the_sub_field( 'titulo_2' ); ?></h2></a>
+	    	<div class="hover-featured">
+	      <?php $enlace_2 = get_sub_field( 'enlace_2' ); ?>
+	      	<?php if ( $enlace_2 ) { ?>
+	        <div class="featured-text"><a href="<?php echo $enlace_2; ?>">
+	            <h2><?php the_sub_field( 'titulo_2' ); ?></h2></a>
+	        <?php } ?>
 	        </div>
 	      </div>
 	    </div>
@@ -56,8 +62,11 @@ get_header();
 	    <div class="feat-article"><img class="img-fluid feat-img" src="<?php the_sub_field( 'imagen_3' ); ?>" alt="<?php the_sub_field( 'titulo_3' ); ?>"/>
 	    <?php } ?>
 	      <div class="hover-featured">
-	        <div class="featured-text"><a href="<?php the_sub_field( 'enlace_3' ); ?>">
-	          <h2><?php the_sub_field( 'titulo_3' ); ?></h2></a>
+	        <?php $enlace_3 = get_sub_field( 'enlace_3' ); ?>
+	      	<?php if ( $enlace_3 ) { ?>
+	        <div class="featured-text"><a href="<?php echo $enlace_3; ?>">>
+	            <h2><?php the_sub_field( 'titulo_3' ); ?></h2></a>
+	        <?php } ?>
 	        </div>
 	      </div>
 	    </div>
@@ -67,8 +76,11 @@ get_header();
 	    <div class="feat-article"><img class="img-fluid feat-img" src="<?php the_sub_field( 'imagen_4' ); ?>" alt="<?php the_sub_field( 'titulo_4' ); ?>"/>
 	    <?php } ?>
 	      <div class="hover-featured">
-	        <div class="featured-text"><a href="<?php the_sub_field( 'enlace_4 ') ?>">
+	        <?php $enlace_4 = get_sub_field( 'enlace_4' ); ?>
+	      	<?php if ( $enlace_4 ) { ?>
+	        <div class="featured-text"><a href="<?php echo $enlace_4; ?>">>
 	            <h2><?php the_sub_field( 'titulo_4' ); ?></h2></a>
+	        <?php } ?>
 	        </div>
 	      </div>
 	    </div>

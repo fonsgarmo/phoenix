@@ -13,7 +13,7 @@ get_header();
 <div id="notfound-page" class="container">
 	<div class="row">
 		<div class="col-xl-auto">
-			<h1 class="archive-title">404: no encontrado</h1>
+			<h1 class="archive-title"><span>404: no encontrado</span></h1>
 		</div>
 	</div>
 	<div class="row">
