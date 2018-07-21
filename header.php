@@ -41,7 +41,7 @@
 
       <div class="d-md-none container-fluid" id="mobile-header">
         <div class="row" id="header-row">
-          <div class="col-md-1 offset-md-1 col-4 col-sm-5" id="logo-wrapper"><a href="<?php get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="Isotipo de pekesims"/></a></div>
+          <div class="col-md-1 offset-md-1 col-4 col-sm-5" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="Isotipo de pekesims"/></a></div>
           <div class="col-7 col-sm-6 d-block d-md-none hamburger-menu"><a class="toggler-menu"><span></span></a></div>
         </div>
         <div class="row mobile-menu">
