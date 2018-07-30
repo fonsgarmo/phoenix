@@ -531,7 +531,7 @@ img{
   .home-strip{
     margin-bottom: 25px;
     background-color: #e5007d;
-    max-height: 120px;
+    max-height: 160px;
   }
 
   .home-strip h3{
@@ -791,7 +791,7 @@ img{
 
   @media (max-width: 594px) {
     .home-strip{
-      max-height: 152px;
+      max-height: 180px;
     }
 
     #news-cover .cover-pic{
