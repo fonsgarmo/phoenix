@@ -177,7 +177,6 @@ add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 add_theme_support( 'custom-logo' );
 
 register_nav_menus( array(  
-  'primary' => __( 'Primary', 'phoenix' ),  
   'secondary' => __('Footer', 'phoenix')  
 ) );
 
