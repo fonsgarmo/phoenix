@@ -177,7 +177,7 @@ add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
 add_theme_support( 'custom-logo' );
 
 register_nav_menus( array(  
-  'secondary' => __('Footer', 'phoenix')  
+  'secondary' => __('Footer', 'phoenix') /* La segunda parte te permite establecer un nombre personalizado en el back-end, en lugar de secondary */
 ) );
 
 add_filter( 'get_the_archive_title', function ($title) {
