@@ -27,14 +27,27 @@
 				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 			?>
         	<div class="col-md-1 col-lg-1 col-xl-1 col-1" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="Isotipo de pekesims"/></a></div>
-        	<div class="col-md-10 col-xl-11" id="menu-wrapper">
+        	<div class="col-md-10 col-lg-10 col-xl-10" id="menu-wrapper">
 	            <?php
 					wp_nav_menu( array(
 					'theme_location' => 'menu-1',
-					'menu_id'        => 'main-menu',
-					'menu_class'	=> 'link-menu'
+					'menu_id'        => 'main-menu'
 					) );
 				?>
+          </div>
+          <div class="col-md-1">
+            <p class="search-icon text-center"><a href="#"><i class="icon-magnifier"></i></a></p>
+          </div>
+        </div>
+        <div class="row" id="header-search-row">
+          <div class="col-md-8 text-center">
+            <h3 class="search-instructions">Introduce un término de búsqueda y pulsa enter</h3>
+          </div>
+          <div class="col-md-3">
+            <?php get_search_form(); ?>
+          </div>
+          <div class="col-md-1">
+            <p class="search-close text-left mx-auto"><a href="#"><i class="icon-close"></i></a></p>
           </div>
         </div>
       </div>
@@ -55,6 +68,13 @@
 					) );
 				?>
             </ul>
+          </div>
+          <div class="col-12">
+            <?php 
+                  add_filter( 'get_search_form', 'mobile_search_form' );
+                  get_search_form();
+                  remove_filter( 'get_search_form', 'mobile_search_form' ); 
+            ?>
           </div>
         </div>
       </div>

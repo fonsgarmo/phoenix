@@ -4,6 +4,14 @@ $(document).ready(function(){
         $('.mobile-menu').toggleClass('open');
     });
 
+    $('.search-icon').on('click', function(){
+        $('#header-search-row').addClass('show-search');
+    });
+
+    $('.search-close').on('click', function(){
+        $('#header-search-row').removeClass('show-search');
+    });
+
     $( "li.menu-item" ).hover(function() {  // mouse enter
     $( this ).find( " > .sub-menu" ).show(); // display immediate child
 
