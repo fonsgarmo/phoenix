@@ -528,6 +528,14 @@ img{
 
   /* Home */
 
+  /*New featured home*/
+
+  .featured-pic{
+    display: inline-block;
+  }
+
+  /*End new featured home*/
+
   #news-cover .cover-pic{
     min-height: 300px;
   }
