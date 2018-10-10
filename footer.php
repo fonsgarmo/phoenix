@@ -29,7 +29,7 @@
 		  </div>
 		  <div class="col-lg-3 offset-lg-3 col-md-12 text-center col-sm-12 col-12" id="footer-social">
 		  	<?php if ( have_rows( 'links_sociales', 'option' ) ) : ?>
-		    <p class="social-footer-text">No te pierdas nada</p>
+		    <p class="social-footer-text">Don't miss a thing!</p>
 		    <?php while ( have_rows( 'links_sociales', 'option' ) ) : the_row(); ?>
 		    <ul class="social-icons-footer">
 		    	<a href="<?php the_sub_field( 'twitter_footer' ); ?>"><li class="icon-social-twitter"></li></a>
@@ -44,8 +44,8 @@
 		  <?php if ( get_field( 'logotipo_footer', 'option' ) ) { ?>
 		  <div class="col-md-12 text-center"><img class="img-fluid footer-logo" src="<?php the_field( 'logotipo_footer', 'option' ); ?>" alt="Isotipo de pekesims blanco"/>
 		  <?php } ?>
-		    <p class="footer-copy">© 2007 - <?php echo date('Y'); ?> | Todos los derechos reservados | Esta web no está afiliada con EA. Las marcas nombradas pertenecen a sus respectivos dueños.</p>
-		    <p class="footer-copy">Diseño web y desarrollo <a href="http://agdesign.es"> AG Design</a></p>
+		    <p class="footer-copy">© 2007 - <?php echo date('Y'); ?> | All rights reserved | This web is not afiliated with EA. All trademarks belong to their owners.</p>
+		    <p class="footer-copy">Web design and development <a href="http://agdesign.es"> Fons Design & Creativity</a></p>
 		  </div>
 		</div>
 		</div>

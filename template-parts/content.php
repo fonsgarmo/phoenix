@@ -11,7 +11,7 @@
 <div class="row individual-intro">
   <div class="col-xl-9">
     <h1 class="individual-title"><span><?php the_title(); ?></span></h1>
-    <h4 class="individual-date"><span><?php the_date('d.m.Y') ?> | <strong>Por</strong> <?php the_author(); ?></span></h4>
+    <h4 class="individual-date"><span><?php the_date('d.m.Y') ?> | <strong>By</strong> <?php the_author(); ?></span></h4>
   </div>
 </div>
 <div class="row single-content">
@@ -22,7 +22,7 @@
           <?php the_content(); ?>
         </div>
         <div class="single-categories">
-          <h4><span>Publicado en: <?php the_category(', '); ?></span></h4>
+          <h4><span>Posted on: <?php the_category(', '); ?></span></h4>
         </div>
       <div class="single-comments">
         <?php if ( comments_open() || get_comments_number() ) :
