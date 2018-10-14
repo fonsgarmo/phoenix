@@ -26,7 +26,7 @@
           	<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 			?>
-        	<div class="col-md-1 col-lg-1 col-xl-1 col-1" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="Isotipo de pekesims"/></a></div>
+        	<div class="col-md-1 col-lg-1 col-xl-1 col-1" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="pekesims' isotipe"/></a></div>
         	<div class="col-md-10 col-lg-10 col-xl-10" id="menu-wrapper">
 	            <?php
 					wp_nav_menu( array(
@@ -40,8 +40,8 @@
           </div>
         </div>
         <div class="row" id="header-search-row">
-          <div class="col-md-8 text-center">
-            <h3 class="search-instructions">Introduce un término de búsqueda y pulsa enter</h3>
+          <div class="col-md-4 offset-md-4 text-center">
+            <h3 class="search-instructions">Type a keyword and press Enter</h3>
           </div>
           <div class="col-md-3">
             <?php get_search_form(); ?>
