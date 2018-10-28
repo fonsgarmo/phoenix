@@ -187,7 +187,7 @@ img{
     padding-top: 20px; }
     #header #main-menu li {
       margin-right: 25px;
-      display: inline;
+      display: inline-block;
       font-size: 17px;
       font-weight: 800;
       text-transform: uppercase; }
@@ -467,19 +467,26 @@ img{
     color: #e5007d !important;
   }
 
-  .sub-menu{
-    overflow: hidden;
-    position: absolute;
+  .menu-menu-principal-container ul li ul {
     display: none;
-    background: #F2F2F2;
-    padding: 20px 20px;
+  }
+
+  .menu-menu-principal-container ul li:hover ul {
+    display: inline;
+    position: absolute;
+    margin: 0 0;
+    background: #d9d9d9;
+    padding: 10px 10px;
     float: right;
     z-index: 10;
+    top: 45px;
   }
 
   #header #main-menu .sub-menu li{
+    
     display: list-item;
     list-style: none;
+    
   }
 
   #single-sidebar{
