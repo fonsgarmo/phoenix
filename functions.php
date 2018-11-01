@@ -136,11 +136,6 @@ function phoenix_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'phoenix_scripts' );
 
-if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'featured-big', 635, 250, true );
-	add_image_size( 'featured-small', 445, 250, true );
-}
-
 /**
  * Implement the Custom Header feature.
  */
@@ -249,9 +244,5 @@ function mobile_search_form( $form ) {
  
     return $form;
 }
-
-
-
-
 
 
