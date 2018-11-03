@@ -20,6 +20,17 @@
 	<?php wp_head(); ?>
 </head>
 <body>
+
+  <?php if ( get_field( 'pre-header_activo', 'option' ) == 1 ) { ?> 
+     <div class="container-fluid" id="pre-header">
+      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 offset-xl-9 offset-lg-8 offset-md-6 offset-sm-6">
+        <a href="https://en.pekesims.com"> <p>Go to pekesims in English<i class="icon-arrow-right"></i></p></a>
+      </div>
+    </div>
+    <?php } else { 
+      
+    } ?>
+   
     <header>
       <div class="container-fluid d-none d-md-block" id="header">
         <div class="row" id="header-row">
