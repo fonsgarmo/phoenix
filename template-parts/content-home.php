@@ -9,7 +9,8 @@
 
 ?>
 
-<?php 
+
+<?php  
 	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 	$args = array(
 		'nopaging' => false,
@@ -57,7 +58,7 @@
 				$args_pag = array(
 					'base'               => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 					'format'             => '/page/%#%',
-					'total'              => 25,
+					'total'              => 5,
 					'current'            => max( 1, get_query_var('page') ),
 					'show_all'           => false,
 					'end_size'           => 2,
@@ -73,7 +74,8 @@
 				); 
 				echo paginate_links( $args_pag ); ?>
 			</div>
-		</div>
+		</div> 
+
 		<div class="col-xl-6 offset-xl-3 text-center">
 			<?php get_search_form(); ?>
 		</div>
