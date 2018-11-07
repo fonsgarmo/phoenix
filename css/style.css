@@ -173,6 +173,18 @@ img{
   -ms-flex-align: center;
   align-items: center; }
 
+#pre-header{
+background-color: #e5007d; }
+
+  #pre-header p {
+    margin-bottom: 0;
+    padding: 5px 0;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: right; }
+
 #header {
   background-color: #F2F2F2;
   padding: 22.5px 22.5px;
