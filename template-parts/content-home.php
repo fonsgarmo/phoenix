@@ -49,7 +49,7 @@
 		 ?>
 		 <?php wp_reset_query(); ?> 
 
-		<div class="col-md-6 text-right pagination">
+		<div class="col-md-12 text-right pagination">
 			<div class="pag-box">
 				<?php 
 
