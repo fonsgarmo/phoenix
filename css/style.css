@@ -66,9 +66,15 @@ img{
   border-radius: 0;
 }
 
+.slider-container{
+  padding: 0 0;
+}
+
 .home-slider{
   padding: 0 0;
 }
+
+
 
 .pks-btn {
   font-weight: 300;

@@ -18,7 +18,7 @@ get_header();
 ?>
 
 <section class="d-none d-lg-block" id="featured" style="margin-top: 0">
-	<div class="container-fluid">
+	<div class="container-fluid slider-container">
 		<div class="col-xl-12 home-slider">
 			<?php dynamic_sidebar('home-slider'); ?>
 		</div>
