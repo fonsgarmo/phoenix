@@ -18,11 +18,9 @@ get_header();
 ?>
 
 <section class="d-none d-lg-block" id="featured" style="margin-top: 0">
-	<div class="container">
-		<div class="col-md-12 no-gutters text-center">
-			<img class="featured-pic" src="https://c2.staticflickr.com/2/1780/30043002258_2a2c691104_b.jpg" alt="TEST">
-			<img class="featured-pic" src="https://c2.staticflickr.com/2/1780/30043002258_2a2c691104_b.jpg" alt="TEST">
-			<img class="featured-pic" src="https://c2.staticflickr.com/2/1780/30043002258_2a2c691104_b.jpg" alt="TEST">
+	<div class="container-fluid">
+		<div class="col-xl-12 home-slider">
+			<?php dynamic_sidebar('home-slider'); ?>
 		</div>
 	</div>
 </section>

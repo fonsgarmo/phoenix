@@ -224,6 +224,15 @@ function custom_sidebars() {
 	);
 	register_sidebar( $args );
 
+	$slider = array(
+		'id'            => 'home-slider',
+		'name'          => __( 'Slider home', 'text_domain' ),
+		'description' => 'Zona reservada para el slider de la home',
+		'before_widget' => '',
+		'after_widget' => '',
+	);
+	register_sidebar( $slider );
+
 }
 add_action( 'widgets_init', 'custom_sidebars' );
 
