@@ -520,12 +520,15 @@ img{
     z-index: 10;
     left: 100%;
     top: auto;
+    max-width: 100%px;
+    width: 395px;
   }
 
 
   #header #main-menu .sub-menu li{
     display: list-item;
-    list-style: none outside none;
+    list-style: none;
+    list-style-position: inside;
     text-align: left;
   }
 
