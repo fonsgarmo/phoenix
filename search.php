@@ -16,7 +16,7 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 				<div class="col-xl-9">
 					<h1 class="search-title">
-						<span>Resultados de la búsqueda para <b><?php echo get_search_query(); ?></b></span>
+						<span><?php _e('Resultados de la búsqueda para ', 'phoenix') ?><b><?php echo get_search_query(); ?></b></span>
 					</h1>
 				</div>
 			<?php 
@@ -89,8 +89,8 @@ get_header();
 		</div>
 	<div class="row search-pagination">
 	 	<div class="col-md-4 offset-md-4">
-	 		<div class="archive-nav"><?php previous_posts_link( '« Anterior' ); ?>
-	 		<?php next_posts_link( 'Siguiente »' ); ?></div>
+	 		<div class="archive-nav"><?php previous_posts_link( __('« Anterior', 'phoenix') ); ?>
+	 		<?php next_posts_link( __('Siguiente »', 'phoenix') ); ?></div>
 		</div>
 	 </div>
 	</div><!-- #primary -->

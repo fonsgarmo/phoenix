@@ -98,7 +98,7 @@ get_header();
 			<h3 class="text-center"><?php the_sub_field( 'titulo' ) ?></h3>
 			<?php $enlace = get_sub_field( 'enlace' ); ?>
 			<?php if ( $enlace ) { ?>
-			<a href="<?php echo $enlace; ?>"><h4 class="text-center">Saber más <span class="icon-arrow-right"></span></h4></a>
+			<a href="<?php echo $enlace; ?>"><h4 class="text-center"><?php _e('Saber más', 'phoenix'); ?> <span class="icon-arrow-right"></span></h4></a>
 			<?php } ?>
 		</div>
 	</div>

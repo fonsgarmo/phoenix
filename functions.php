@@ -107,7 +107,7 @@ function phoenix_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'phoenix' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'phoenix' ),
+		'description'   => esc_html__( 'Añade widgets aquí.', 'phoenix' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -227,7 +227,7 @@ add_action( 'widgets_init', 'custom_sidebars' );
 function wpdocs_my_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
     <div>
-    <input class="form-control" placeholder="Buscar..." type="text" value="' . get_search_query() . '" name="s" id="s" />
+    <input class="form-control" placeholder="' .__('Buscar...','phoenix'). '" type="text" value="' . get_search_query() . '" name="s" id="s" />
     </div>
     </form>';
  
@@ -238,7 +238,7 @@ add_filter( 'get_search_form', 'wpdocs_my_search_form' );
 function mobile_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform-mobile" class="searchform" action="' . home_url( '/' ) . '" >
     <div>
-    <input class="form-control" placeholder="Buscar..." type="text" value="' . get_search_query() . '" name="s" id="s" />
+    <input class="form-control" placeholder="' .__('Buscar...','phoenix'). '" type="text" value="' . get_search_query() . '" name="s" id="s" />
     </div>
     </form>';
  

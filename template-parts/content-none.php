@@ -19,14 +19,14 @@
 		if ( is_search() ) :
 			?>
 
-			<h3>Lo sentimos, pero no hemos podido encontrar lo que buscas. Utiliza otros términos de búsqueda e inténtalo de nuevo.</h3>
+			<h3><?php _e('Lo sentimos, pero no hemos podido encontrar lo que buscas. Utiliza otros términos de búsqueda e inténtalo de nuevo.', 'phoenix'); ?></h3>
 			
 			<?php
 
 		else :
 			?>
 
-			<h3>No hemos podido encontrar lo que buscas :(</h3>
+			<h3><?php _e('No hemos podido encontrar lo que buscas :(', 'phoenix'); ?></h3>
 			<?php
 
 
