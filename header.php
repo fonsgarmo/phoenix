@@ -24,7 +24,7 @@
   <?php if ( get_field( 'pre-header_activo', 'option' ) == 1 ) { ?> 
      <div class="container-fluid" id="pre-header">
       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 offset-xl-9 offset-lg-8 offset-md-6 offset-sm-6">
-        <a href="https://en.pekesims.com"> <p>Go to pekesims in English<i class="icon-arrow-right"></i></p></a>
+        <a href="/pekesims/en"> <p><?php _e('Go to pekesims in English', 'phoenix'); ?><i class="icon-arrow-right"></i></p></a>
       </div>
     </div>
     <?php } else { 
@@ -37,7 +37,7 @@
           	<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 			?>
-        	<div class="col-md-1 col-lg-1 col-xl-1 col-1" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="Isotipo de pekesims"/></a></div>
+        	<div class="col-md-1 col-lg-1 col-xl-1 col-1" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php _e('Isotipo de pekesims', 'phoenix'); ?>"/></a></div>
         	<div class="col-md-10 col-lg-10 col-xl-10" id="menu-wrapper">
 	            <?php
 					wp_nav_menu( array(
@@ -52,7 +52,7 @@
         </div>
         <div class="row" id="header-search-row">
           <div class="col-md-8 text-center">
-            <h3 class="search-instructions">Introduce un término de búsqueda y pulsa enter</h3>
+            <h3 class="search-instructions"><?php _e('Introduce un término de búsqueda y pulsa enter', 'phoenix');  ?></h3>
           </div>
           <div class="col-md-3">
             <?php get_search_form(); ?>
