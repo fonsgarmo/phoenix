@@ -244,5 +244,3 @@ function mobile_search_form( $form ) {
  
     return $form;
 }
-
-

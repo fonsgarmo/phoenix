@@ -21,10 +21,10 @@
 </head>
 <body>
 
-  <?php if ( get_field( 'pre-header_activo', 'option' ) == 1 ) { ?> 
+  <?php if ( get_field( 'pre-header_activo' ) == 1 ) { ?> 
      <div class="container-fluid" id="pre-header">
       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 offset-xl-9 offset-lg-8 offset-md-6 offset-sm-6">
-        <a href="/pekesims/en"> <p><?php _e('Go to pekesims in English', 'phoenix'); ?><i class="icon-arrow-right"></i></p></a>
+        <a href="<?php the_field( 'pre-header-enlace' ); ?>"> <p><?php _e('Go to pekesims in English', 'phoenix'); ?><i class="icon-arrow-right"></i></p></a>
       </div>
     </div>
     <?php } else { 

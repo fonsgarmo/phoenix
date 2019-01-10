@@ -90,9 +90,9 @@ get_header();
 	<?php endif; ?>
 	</div>
 </section>
-<?php if ( have_rows( 'opciones_banda', 'option' ) ) : ?>
+<?php if ( have_rows( 'opciones_banda') ) : ?>
 <div class="container-fluid">
-	<?php while ( have_rows( 'opciones_banda', 'option' ) ) : the_row(); ?>
+	<?php while ( have_rows( 'opciones_banda') ) : the_row(); ?>
 	<div class="row home-strip">
 		<div class="col-8 offset-2">
 			<h3 class="text-center"><?php the_sub_field( 'titulo' ) ?></h3>

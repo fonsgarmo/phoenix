@@ -1,14 +1,13 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Phoenix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-10 16:58+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: es_ES\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: 2019-01-10 17:08+0000\n"
+"Last-Translator: Fons <fonxi1994@gmail.com>\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,15 +21,15 @@ msgstr ""
 
 #. Name of the template
 msgid "Archivo"
-msgstr ""
+msgstr "Archive"
 
 #: functions.php:110
 msgid "Añade widgets aquí."
-msgstr ""
+msgstr "Add widgets here"
 
 #: functions.php:230 functions.php:241
 msgid "Buscar..."
-msgstr ""
+msgstr "Search..."
 
 #: comments.php:66
 msgid "Comments are closed."
@@ -47,7 +46,7 @@ msgstr[1] ""
 
 #: footer.php:48
 msgid "Diseño web y desarrollo"
-msgstr ""
+msgstr "Web design and development"
 
 #. %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:99
@@ -65,7 +64,7 @@ msgstr ""
 
 #: header.php:27
 msgid "Go to pekesims in English"
-msgstr ""
+msgstr "Ir a pekesims en español"
 
 #. Name of the template
 msgid "Home"
@@ -81,11 +80,11 @@ msgstr ""
 
 #: header.php:55
 msgid "Introduce un término de búsqueda y pulsa enter"
-msgstr ""
+msgstr "TYPE A KEYWORD AND PRESS ENTER"
 
 #: header.php:40
 msgid "Isotipo de pekesims"
-msgstr ""
+msgstr "pekesims' isotype"
 
 #. %s: post title
 #: inc/template-tags.php:82
@@ -104,6 +103,8 @@ msgid ""
 "Lo sentimos, pero no hemos podido encontrar lo que buscas. Utiliza otros "
 "términos de búsqueda e inténtalo de nuevo."
 msgstr ""
+"Sorry, we couldn't find what you're looking for. Please try other keywords "
+"and try again."
 
 #: functions.php:47
 msgid "Main Menu"
@@ -111,11 +112,11 @@ msgstr ""
 
 #: template-parts/content-none.php:29
 msgid "No hemos podido encontrar lo que buscas :("
-msgstr ""
+msgstr "We couldn't find what you're looking for :("
 
 #: footer.php:32
 msgid "No te pierdas nada"
-msgstr ""
+msgstr "Don't miss a thing"
 
 #. 1: title.
 #: comments.php:35
@@ -135,7 +136,7 @@ msgstr ""
 
 #: template-parts/content-archive.php:15 template-parts/content.php:14
 msgid "Por"
-msgstr ""
+msgstr "By"
 
 #. %s: post author.
 #: inc/template-tags.php:45
@@ -159,15 +160,15 @@ msgstr ""
 
 #: template-parts/content.php:25
 msgid "Publicado en: "
-msgstr ""
+msgstr "Posted in:"
 
 #: search.php:19
 msgid "Resultados de la búsqueda para "
-msgstr ""
+msgstr "Search results for"
 
 #: page-home.php:101
 msgid "Saber más"
-msgstr ""
+msgstr "Read more"
 
 #: functions.php:108
 msgid "Sidebar"
@@ -175,7 +176,7 @@ msgstr ""
 
 #: archive.php:91 search.php:93 template-parts/content-home.php:67
 msgid "Siguiente »"
-msgstr ""
+msgstr "Next »"
 
 #. 1: list of tags.
 #: inc/template-tags.php:72
@@ -188,7 +189,9 @@ msgid ""
 "| Todos los derechos reservados | Esta web no está afiliada con EA. Las "
 "marcas nombradas pertenecen a sus respectivos dueños."
 msgstr ""
+"| All rights reserved | This web is not afiliated with EA. All trademarks "
+"belong to their owners."
 
 #: archive.php:90 search.php:92 template-parts/content-home.php:66
 msgid "« Anterior"
-msgstr ""
+msgstr "« Previous"
