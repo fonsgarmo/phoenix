@@ -212,7 +212,7 @@ function custom_sidebars() {
 
 	$args = array(
 		'id'            => 'sidebar-footer',
-		'name'          => __( 'Widget del pie', 'text_domain' ),
+		'name'          => __( 'Widget del pie', 'phoenix' ),
 		'description' => 'Zona reservada para mostrar un anuncio de Google AdSense',
 		'before_widget' => '',
 		'after_widget' => '',

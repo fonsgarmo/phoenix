@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Phoenix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-10 16:58+0000\n"
-"PO-Revision-Date: 2019-01-10 17:03+0000\n"
+"POT-Creation-Date: 2019-01-13 10:48+0000\n"
+"PO-Revision-Date: 2019-01-13 10:48+0000\n"
 "Last-Translator: Fons <fonxi1994@gmail.com>\n"
 "Language-Team: Español\n"
 "Language: es_ES\n"
@@ -14,26 +14,39 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-4.9.9"
 
-#. used between list items, there is a space after the comma
-#: inc/template-tags.php:62
-msgid ", "
+#: 404.php:16
+msgid "404: no encontrado"
+msgstr "404: no encontrado"
+
+#: 404.php:22
+msgid ""
+"Shoo flee! No hemos podido encontrar la página a la que intentabas acceder. "
+"Utiliza el menú superior, "
 msgstr ""
+"Shoo flee! No hemos podido encontrar la página a la que intentabas acceder. "
+"Utiliza el menú superior, "
 
-#. Name of the template
-msgid "Archivo"
-msgstr "Archivo"
+#: 404.php:22
+msgid "vuelve al inicio"
+msgstr "vuelve al inicio"
 
-#: functions.php:110
-msgid "Añade widgets aquí."
-msgstr "Añade widgets aquí."
+#: 404.php:22
+msgid " o usa el buscador para encontrar lo que buscas."
+msgstr " o usa el buscador para encontrar lo que buscas."
 
-#: functions.php:230 functions.php:241
-msgid "Buscar..."
-msgstr "Buscar..."
+#: archive.php:90 search.php:92 template-parts/content-home.php:66
+msgid "« Anterior"
+msgstr "« Anterior"
 
-#: comments.php:66
-msgid "Comments are closed."
-msgstr "Los comentario están cerrados"
+#: archive.php:91 search.php:93 template-parts/content-home.php:67
+msgid "Siguiente »"
+msgstr "Siguiente »"
+
+#. 1: title.
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "One thought on &ldquo;%1$s&rdquo;"
 
 #. 1: comment count number, 2: title.
 #: comments.php:41
@@ -44,47 +57,114 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Los comentario están cerrados"
+
+#: footer.php:32
+msgid "No te pierdas nada"
+msgstr "No te pierdas nada"
+
+#: footer.php:47
+msgid ""
+"| Todos los derechos reservados | Esta web no está afiliada con EA. Las "
+"marcas nombradas pertenecen a sus respectivos dueños."
+msgstr ""
+"| Todos los derechos reservados | Esta web no está afiliada con EA. Las "
+"marcas nombradas pertenecen a sus respectivos dueños."
+
 #: footer.php:48
 msgid "Diseño web y desarrollo"
 msgstr "Diseño web y desarrollo"
 
-#. %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:99
-#, php-format
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "Editar <span class=\"screen-reader-text\">%s</span>"
+#: functions.php:47
+msgid "Main Menu"
+msgstr "Main Menu"
 
-#. Author of the theme
-msgid "Fons x pekesims"
-msgstr "Fons x pekesims"
+#: functions.php:108
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: functions.php:110
+msgid "Añade widgets aquí."
+msgstr "Añade widgets aquí."
 
 #: functions.php:175
 msgid "Footer"
 msgstr "Footer"
 
+#: functions.php:215
+msgid "Widget del pie"
+msgstr ""
+
+#: functions.php:230 functions.php:241
+msgid "Buscar..."
+msgstr "Buscar..."
+
 #: header.php:27
 msgid "Go to pekesims in English"
 msgstr "Go to pekesims in English"
 
-#. Name of the template
-msgid "Home"
-msgstr ""
-
-#. Author URI of the theme
-msgid "http://agdesign.es"
-msgstr ""
-
-#. URI of the theme
-msgid "https://pekesims.com"
-msgstr ""
+#: header.php:40
+msgid "Isotipo de pekesims"
+msgstr "Isotipo de pekesims"
 
 #: header.php:55
 msgid "Introduce un término de búsqueda y pulsa enter"
 msgstr "Introduce un término de búsqueda y pulsa enter"
 
-#: header.php:40
-msgid "Isotipo de pekesims"
-msgstr "Isotipo de pekesims"
+#. Name of the template
+msgid "Archivo"
+msgstr "Archivo"
+
+#. Name of the template
+msgid "Home"
+msgstr ""
+
+#: page-home.php:101
+msgid "Saber más"
+msgstr "Saber más"
+
+#: search.php:19
+msgid "Resultados de la búsqueda para "
+msgstr "Resultados de la búsqueda para "
+
+#. %s: post date.
+#: inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#. %s: post author.
+#: inc/template-tags.php:45
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "por %s"
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:62
+msgid ", "
+msgstr ""
+
+#. 1: list of categories.
+#: inc/template-tags.php:65
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Posted in %1$s"
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:69
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. 1: list of tags.
+#: inc/template-tags.php:72
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Etiquetado en %1$s"
 
 #. %s: post title
 #: inc/template-tags.php:82
@@ -92,11 +172,19 @@ msgstr "Isotipo de pekesims"
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "Dejar un comentario<span class=\"screen-reader-text\"> en %s</span>"
 
-#. used between list items, there is a space after the comma
-#: inc/template-tags.php:69
-msgctxt "list item separator"
-msgid ", "
-msgstr ""
+#. %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:99
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Editar <span class=\"screen-reader-text\">%s</span>"
+
+#: template-parts/content-archive.php:15 template-parts/content.php:14
+msgid "Por"
+msgstr "Por"
+
+#: template-parts/content-none.php:13
+msgid "Sin resultados"
+msgstr "Sin resultados"
 
 #: template-parts/content-none.php:22
 msgid ""
@@ -106,23 +194,13 @@ msgstr ""
 "Lo sentimos, pero no hemos podido encontrar lo que buscas. Utiliza otros "
 "términos de búsqueda e inténtalo de nuevo."
 
-#: functions.php:47
-msgid "Main Menu"
-msgstr "Main Menu"
-
 #: template-parts/content-none.php:29
 msgid "No hemos podido encontrar lo que buscas :("
 msgstr "No hemos podido encontrar lo que buscas :("
 
-#: footer.php:32
-msgid "No te pierdas nada"
-msgstr "No te pierdas nada"
-
-#. 1: title.
-#: comments.php:35
-#, php-format
-msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr "One thought on &ldquo;%1$s&rdquo;"
+#: template-parts/content.php:25
+msgid "Publicado en: "
+msgstr "Publicado en: "
 
 #. Name of the theme
 msgid "Phoenix"
@@ -136,64 +214,14 @@ msgstr ""
 "Phoenix is a modern and responsive theme made exclusively for pekesims, one "
 "of biggest fansite about The Sims in Spanish"
 
-#: template-parts/content-archive.php:15 template-parts/content.php:14
-msgid "Por"
-msgstr "Por"
-
-#. %s: post author.
-#: inc/template-tags.php:45
-#, php-format
-msgctxt "post author"
-msgid "by %s"
-msgstr "por %s"
-
-#. %s: post date.
-#: inc/template-tags.php:29
-#, php-format
-msgctxt "post date"
-msgid "Posted on %s"
+#. URI of the theme
+msgid "https://pekesims.com"
 msgstr ""
 
-#. 1: list of categories.
-#: inc/template-tags.php:65
-#, php-format
-msgid "Posted in %1$s"
-msgstr "Posted in %1$s"
+#. Author of the theme
+msgid "Fons x pekesims"
+msgstr "Fons x pekesims"
 
-#: template-parts/content.php:25
-msgid "Publicado en: "
-msgstr "Publicado en: "
-
-#: search.php:19
-msgid "Resultados de la búsqueda para "
-msgstr "Resultados de la búsqueda para "
-
-#: page-home.php:101
-msgid "Saber más"
-msgstr "Saber más"
-
-#: functions.php:108
-msgid "Sidebar"
-msgstr "Sidebar"
-
-#: archive.php:91 search.php:93 template-parts/content-home.php:67
-msgid "Siguiente »"
-msgstr "Siguiente »"
-
-#. 1: list of tags.
-#: inc/template-tags.php:72
-#, php-format
-msgid "Tagged %1$s"
-msgstr "Etiquetado en %1$s"
-
-#: footer.php:47
-msgid ""
-"| Todos los derechos reservados | Esta web no está afiliada con EA. Las "
-"marcas nombradas pertenecen a sus respectivos dueños."
+#. Author URI of the theme
+msgid "http://agdesign.es"
 msgstr ""
-"| Todos los derechos reservados | Esta web no está afiliada con EA. Las "
-"marcas nombradas pertenecen a sus respectivos dueños."
-
-#: archive.php:90 search.php:92 template-parts/content-home.php:66
-msgid "« Anterior"
-msgstr "« Anterior"

@@ -10,7 +10,7 @@
 ?>
 
 <div class="col-xl-auto results-not-found">
-		<h1>Sin resultados</h1>
+		<h1><?php _e('Sin resultados', 'phoenix'); ?></h1>
 </div>
 
 	<div class="col-xl-12">
