@@ -6,7 +6,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  color: #292929; }
+  color: #292929;
+  overflow-x: hidden; }
 
 h1 {
   font-family: "Open Sans", serif;
@@ -102,7 +103,18 @@ img{
   padding-left: 40% !important;
 }
 
+.hamburger-menu-desktop{
+  padding-left: 43% !important;
+}
+
 .hamburger-box, .toggler-menu:before, .toggler-menu:after, .toggler-menu span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  position: absolute; }
+
+.hamburger-box, .toggler-menu-desktop:before, .toggler-menu-desktop:after, .toggler-menu-desktop span {
   display: block;
   height: 2px;
   width: 100%;
@@ -154,6 +166,56 @@ img{
   .toggler-menu.active span {
     opacity: 0; }
 
+.toggler-menu-desktop {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: 27px 0; }
+  .toggler-menu-desktop:before {
+    content: "";
+    top: 0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out; }
+  .toggler-menu-desktop:after {
+    content: "";
+    bottom: 0;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out; }
+  .toggler-menu-desktop span {
+    top: 50%;
+    margin-top: -1px;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out; }
+  .toggler-menu-desktop.active:before {
+    -moz-transform: rotate(45deg) translateX(17px) translateY(17px);
+    -webkit-transform: rotate(45deg) translateX(17px) translateY(17px);
+    -o-transform: rotate(45deg) translateX(17px) translateY(17px);
+    -ms-transform: rotate(45deg) translateX(17px) translateY(17px);
+    transform: rotate(45deg) translateX(17px) translateY(17px); }
+  .toggler-menu-desktop.active:after {
+    -moz-transform: rotate(-45deg) translateX(17px) translateY(-17px);
+    -webkit-transform: rotate(-45deg) translateX(17px) translateY(-17px);
+    -o-transform: rotate(-45deg) translateX(17px) translateY(-17px);
+    -ms-transform: rotate(-45deg) translateX(17px) translateY(-17px);
+    transform: rotate(-45deg) translateX(17px) translateY(-17px); }
+  .toggler-menu-desktop.active span {
+    opacity: 0; }
+
+.hamburger-move-left{
+    left: -275px;
+    z-index: 1000;
+  }
+
 #header-row {
   display: -webkit-box;
   display: -moz-box;
@@ -186,9 +248,10 @@ img{
     text-align: right; }
 
 #header {
-  background-color: #F2F2F2;
   padding: 22.5px 22.5px;
-  margin-bottom: 0px; }
+  margin-bottom: 0px; 
+  position: absolute;
+  z-index: 15000 }
   #header .header-logo {
     max-height: 75px; }
   #header #logo-wrapper {
@@ -218,6 +281,30 @@ img{
         text-decoration: underline; }
   #header .dropdown-menu {
     z-index: 1000; }
+
+.desktop-menu-open{
+  right: 0px !important;
+}       
+
+#desktop-menu-slide{
+  position: absolute;
+  right: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #e5007d;
+  z-index: 15001;
+  padding: 20px;
+  float: right;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+#desktop-menu-slide h3{
+  color: #ffffff;
+}
 
 #mobile-header {
   background-color: #F2F2F2;
@@ -292,7 +379,7 @@ img{
         color: #e0e0e0; }
 
 #featured {
-  margin-top: 50px; }
+  padding-top: 25px; }
   #featured .featured-row {
     margin-bottom: 25px; }
   #featured .feat-article {
@@ -475,11 +562,29 @@ img{
     text-align: center;
   }
 
-  .current-menu-item a{
-    color: #e5007d !important;
+  /* Menus y Submenus */
+
+  #menu-wrapper ul{
+    list-style: none;
+    padding-inline-start: 0px;
   }
 
-  /* Submenus */
+  #menu-wrapper ul li{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color: #ffffff;
+  }
+
+  #menu-wrapper ul li a{
+    color: #ffffff;
+  }
+
+  #menu-wrapper ul li.current-menu-item a{
+    text-decoration: underline;
+  }
 
   #menu-wrapper .sub-menu {
     display: none;
@@ -493,7 +598,7 @@ img{
     width: 100%;
   }
 
-  #menu-wrapper ul li:hover .sub-menu {
+  #menu-wrapper ul li:active .sub-menu {
     display: inline-block;
     position: absolute;
     margin: 0 0;
