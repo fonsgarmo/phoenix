@@ -17,4 +17,5 @@ $(document).ready(function(){
     $('.search-close').on('click', function(){
         $('#header-search-row').removeClass('show-search');
     });
+
 });
