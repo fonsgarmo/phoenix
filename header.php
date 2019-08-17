@@ -32,15 +32,6 @@
     } ?>
    
     <header>
-      <div class="container-fluid d-none d-md-block" id="header">
-        <div class="row" id="header-row">
-            <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
-        $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-      ?>
-          <div class="col-md-1 col-lg-1 col-xl-1 col-1" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php _e('Isotipo de pekesims', 'phoenix'); ?>"/></a></div>
-          <div class="col-3 offset-5 hamburger-menu-desktop"><a class="toggler-menu-desktop"><span></span></a></div>
-        </div>
-      </div>
       <div id="desktop-menu-slide">
         <h3 class="text-center">Menú</h3>
         <div id="menu-wrapper">
@@ -53,6 +44,16 @@
         </div>
         <?php get_search_form(); ?>
       </div>
+      <div class="container-fluid d-none d-md-block" id="header">
+        <div class="row" id="header-row">
+            <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+        $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+      ?>
+          <div class="col-md-1 col-lg-1 col-xl-1 col-1" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php _e('Isotipo de pekesims', 'phoenix'); ?>"/></a></div>
+          <div class="col-3 offset-5 hamburger-menu-desktop"><a class="toggler-menu-desktop"><span></span></a></div>
+        </div>
+      </div>
+      
 
 
       <div style="display: none !important;" class="container-fluid d-none d-md-block" id="header">

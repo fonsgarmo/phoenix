@@ -105,6 +105,11 @@ img{
 
 .hamburger-menu-desktop{
   padding-left: 43% !important;
+  -webkit-transition: all 245ms ease-in-out;
+  -moz-transition: all 245ms ease-in-out;
+  -ms-transition: all 245ms ease-in-out;
+  -o-transition: all 245ms ease-in-out;
+  transition: all 245ms ease-in-out;
 }
 
 .hamburger-box, .toggler-menu:before, .toggler-menu:after, .toggler-menu span {
@@ -212,7 +217,7 @@ img{
     opacity: 0; }
 
 .hamburger-move-left{
-    left: -275px;
+    left: -245px;
     z-index: 1000;
   }
 
@@ -250,7 +255,6 @@ img{
 #header {
   padding: 22.5px 22.5px;
   margin-bottom: 0px; 
-  position: absolute;
   z-index: 15000 }
   #header .header-logo {
     max-height: 75px; }
@@ -283,7 +287,7 @@ img{
     z-index: 1000; }
 
 .desktop-menu-open{
-  right: -15px !important;
+  right: 0px !important;
 }       
 
 #desktop-menu-slide{
