@@ -16,7 +16,14 @@ get_header();
 ?>
 
 	<section id="individual-page">
-		<div class="container">
+		<div class="container-fluid">
+			<div class="col-12">
+				<h3 class="page-text-title"><span><?php the_title(); ?></span></h3>
+			</div>
+			<div class="col-12 page-image-title" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+			</div>
+		</div>
+		<div class="container page-container">
 
 		<?php
 		while ( have_posts() ) :

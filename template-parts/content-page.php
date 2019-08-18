@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="row individual-intro">
+<div style="display: none;" class="row individual-intro">
   <div class="col-xl-auto">
     <h1 class="individual-title"><?php the_title(); ?></h1>
   </div>
@@ -17,7 +17,7 @@
 <div class="row">
   <div class="col-lg-9">
     <div class="row">
-      <div class="col-lg-12"><!--<img class="img-fluid individual-cover" src="images/placeholder-cover.jpg"/>-->
+      <div class="col-lg-12">
         <div id="individual-content">
           <?php the_content(); ?>
         </div>

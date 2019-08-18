@@ -798,6 +798,37 @@ img{
     margin-top: 35px;
   }
 
+/*Page image title Phoenix 2.0*/
+
+  .page-image-title{
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(15px);
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .page-container{
+    padding-top: 75px;
+  }
+
+  .page-text-title{
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    padding-top: 165px;
+    width: 100%;
+    margin: 0;
+    font-size: 40px;
+    color: #ffffff;
+  }
+
+  .page-text-title span{
+   background-color: #e5007d;
+   padding: 0 10px;
+  }
+
   #individual-page .individual-intro{
     margin-bottom: 25px;
   }
@@ -808,7 +839,7 @@ img{
     color: #fff; }
 
   .individual-date span{
-    background-color: #e5007d;
+    background-color: #00aff1;
     padding: 0 20px;
   }
 

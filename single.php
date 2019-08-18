@@ -11,6 +11,13 @@ get_header();
 ?>
 
 	<section id="individual-article <?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="container-fluid">
+			<div class="col-12">
+				<h3 class="page-text-title"><span><?php the_title(); ?></span></h3>
+			</div>
+			<div class="col-12 page-image-title" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+			</div>
+		</div>
 	      <div class="container">
 
 		<?php
