@@ -177,6 +177,9 @@ img{
   height: 50px;
   position: relative;
   margin: 27px 0; }
+  .toggler-menu-desktop:hover{
+    cursor: pointer;
+  }
   .toggler-menu-desktop:before {
     content: "";
     top: 0;
@@ -304,7 +307,7 @@ img{
   -ms-transition: all 250ms ease-in-out;
   -o-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 #desktop-menu-slide h3{
@@ -382,6 +385,9 @@ img{
       #footer #footer-menu li a:hover {
         text-decoration: none;
         color: #e0e0e0; }
+#footer #menu-pie{
+  padding: 0;
+}
 
 #featured {
   padding-top: 25px; }
@@ -800,6 +806,10 @@ img{
 
 /*Page image title Phoenix 2.0*/
 
+  .feat-image-wrapper{
+    padding: 0 0 0 0;
+  }
+
   .page-image-title{
     height: 350px;
     background-position: center;
@@ -822,6 +832,7 @@ img{
     margin: 0;
     font-size: 40px;
     color: #ffffff;
+    margin-left: -15px;
   }
 
   .page-text-title span{
@@ -1002,10 +1013,19 @@ img{
 
   /* Media querys WP */
 
+  @media (max-width: 800px){
+    .page-text-title{
+      padding-top: 75px;
+      font-size: 30px;
+      margin-left: -10px;
+    }
+  }
+
   @media (max-width: 531px){
     #footer #footer-menu li{
       font-size: 15px;
       margin-bottom: 10px;
+      margin-right: 0;
       list-style: none;
       display: block;
     }
@@ -1132,7 +1152,8 @@ img{
 @media (max-width: 992px) {
   #footer-menu {
     text-align: center;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    padding: 0; }
   #footer-social {
     margin-bottom: 30px; } }
 

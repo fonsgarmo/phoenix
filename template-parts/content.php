@@ -10,7 +10,6 @@
 ?>
 <div class="row individual-intro">
   <div class="col-xl-9">
-    <!--<h1 class="individual-title"><span><?php the_title(); ?></span></h1>-->
     <h4 class="individual-date"><span><?php the_date('d.m.Y') ?> | <strong><?php _e('Por', 'phoenix'); ?></strong> <?php the_author(); ?></span></h4>
   </div>
 </div>
