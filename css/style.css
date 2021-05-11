@@ -425,6 +425,58 @@ img{
     height: auto;
   }
 
+.title-home-noticias, .title-home-tutoriales, .title-home-descargas, .title-home-sda
+{
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: 30px;
+
+}
+
+.title-home-tutoriales, .title-home-descargas, .title-home-sda{
+  color: #fff;
+}
+
+.more-news, .more-tutorials, .more-descargas, .more-sda{
+  display: block;
+  margin-bottom: 25px;
+}
+
+.more-tutorials a, .more-descargas a, .more-sda a{
+  color: #fff;
+}
+
+.home-news-grid{
+  margin-bottom: 15px;
+}
+
+.articulos-home{
+  background-image: url("https://cdn.pekesims.com/static/rayas_pks2021-30.png");
+  background-color: #e5007d;
+  padding-top:15px;
+  padding-bottom: 15px;
+}
+
+.descargas-home{
+  background-color: #00AFF1;
+  padding-top:15px;
+  padding-bottom: 15px;
+}
+
+.sda-home{
+  background-color: #23d15d;
+  padding-top:15px;
+  padding-bottom: 15px;
+}
+
+.articulos-home .cover-date, .descargas-home .cover-date, .sda-home .cover-date{
+  color: #fff !important;
+}
+
+.articulos-home .cover-title, .descargas-home .cover-title, .sda-home .cover-title{
+  color: #fff !important;
+}
+
   /*WP CSS*/
 
   /* Images */
@@ -592,12 +644,6 @@ img{
     min-width: max-content;
   }
 
-  #main-menu li:last-child{
-    margin-right: 0;
-  }
-
-  
-
   #single-sidebar{
     will-change: min-height;
   }
@@ -605,8 +651,11 @@ img{
   /* Header */
 
   .search-icon{
-    font-size: 30px;
-    margin-top: 15px;
+    margin-right: 0 !important;
+  }
+
+  .search-icon:hover{
+    cursor: pointer;
   }
 
   .search-close{
@@ -619,25 +668,27 @@ img{
     -webkit-transform: translateY(120px);
     -o-transform: translateY(120px);
     -ms-transform: translateY(120px);
-    transform: translateY(120px);
+    transform: translateY(3020px);
   }
 
   #header-search-row{
     position: absolute;
     display: flex;
     align-items: center;
-    top: -120px;
+    top: -3020px;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 22.5px 0;
-    height: 120px;
+    /*padding: 22.5px 0;*/
+    height: 100%;
+    width: 100%;
     background-color: #F5F5F5;
     -webkit-transition: all 300ms ease-in-out;
     -moz-transition: all 300ms ease-in-out;
     -ms-transition: all 300ms ease-in-out;
     -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
+    z-index: 999;
   }
 
   

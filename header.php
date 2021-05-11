@@ -53,7 +53,7 @@
             <p class="search-icon text-center"><a href="#"><i class="icon-magnifier"></i></a></p>
           </div>
         </div>
-        <div class="row" id="header-search-row">
+        <div class="" id="header-search-row">
           <div class="col-md-8 text-center">
             <h3 class="search-instructions"><?php _e('Introduce un término de búsqueda y pulsa enter', 'phoenix');  ?></h3>
           </div>

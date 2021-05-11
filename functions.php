@@ -219,6 +219,15 @@ function custom_sidebars() {
 	);
 	register_sidebar( $args );
 
+	$args = array(
+		'id'            => 'home-adsense',
+		'name'          => __( 'Anuncio homepage', 'phoenix' ),
+		'description' => 'Zona reservada para mostrar un anuncio de Google AdSense',
+		'before_widget' => '',
+		'after_widget' => '',
+	);
+	register_sidebar( $args );
+
 }
 add_action( 'widgets_init', 'custom_sidebars' );
 
