@@ -186,7 +186,7 @@ img{
     text-align: right; }
 
 #header {
-  background-color: #F2F2F2;
+  background-color: #FFFFFF;
   padding: 22.5px 22.5px;
   margin-bottom: 0px; }
   #header .header-logo {
@@ -196,12 +196,16 @@ img{
   #header h1 {
     display: inline; }
   #header #main-menu {
-    padding-top: 20px; }
+    padding-top: 20px;
+    margin-bottom: 0px; }
+  .current-menu-item{
+     font-weight: 700 !important;
+  }
     #header #main-menu li {
       margin-right: 25px;
       display: inline-block;
       font-size: 17px;
-      font-weight: 800;
+      font-weight: 600;
       text-transform: uppercase; }
       #header #main-menu li a {
         -webkit-transition: all 500ms ease-in-out;
@@ -218,6 +222,18 @@ img{
         text-decoration: underline; }
   #header .dropdown-menu {
     z-index: 1000; }
+#menu-wrapper{
+  text-align: center;
+}
+  #menu-wrapper ul{
+      padding-inline-start: 0px;
+}
+
+#menu-wrapper .menu-item-has-children{
+    position: relative;
+  }
+
+
 
 #mobile-header {
   background-color: #F2F2F2;
@@ -494,14 +510,20 @@ img{
   }
 
   #menu-wrapper ul li:hover .sub-menu {
-    display: inline-block;
+    display: block;
     position: absolute;
     margin: 0 0;
-    background: #e8e8e8;
+    border-top: 3px solid #e5007d;
+    background: #fcfcfc;
     padding: 10px 0px;
     float: right;
     z-index: 10;
-    top: 45px;
+    top: 100%;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
   }
 
   .sub-menu a {
@@ -516,7 +538,9 @@ img{
     display: inline-block !important;
     position: absolute;
     margin: 0 0;
-    background: #e8e8e8;
+    border-top: none;
+    border-left: 3px solid #00AFF1;
+    background: #fcfcfc;
     padding: 10px 10px;
     float: left;
     z-index: 10;
@@ -531,8 +555,9 @@ img{
   }
 
   .sub-menu li>a:not(:only-child):after {
-       content: ' ▶';
-       font-size: 10px;
+       content:"❯";
+       font-size: 17px;
+       padding-left: 40px;
     }
 
 
@@ -540,6 +565,7 @@ img{
     display: list-item;
     list-style: none;
     text-align: left;
+    min-width: max-content;
   }
 
   
