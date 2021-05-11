@@ -4,30 +4,30 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   color: #292929; }
 
 h1 {
-  font-family: "Open Sans", serif;
+  font-family: "Montserrat", serif;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase; }
 
 h2 {
-  font-family: "Open Sans", serif;
+  font-family: "Montserrat", serif;
   font-size: 27px;
   font-weight: normal;
   text-transform: uppercase; }
 
 h3 {
-  font-family: "Open Sans", serif;
+  font-family: "Montserrat", serif;
   font-size: 22px;
   font-weight: bold;
   text-transform: uppercase; }
 
 h3.cover-title {
-  font-family: "Open Sans", serif;
+  font-family: "Montserrat", serif;
   font-size: 19px;
   font-weight: 800;
   text-transform: uppercase;
@@ -39,7 +39,7 @@ a h3.cover-title:hover{
   text-decoration: none; }
 
 h4 {
-  font-family: "Open Sans", serif;
+  font-family: "Montserrat", serif;
   font-size: 15px;
   text-transform: uppercase; }
 h4.cover-date{
@@ -190,7 +190,7 @@ img{
   padding: 22.5px 22.5px;
   margin-bottom: 0px; }
   #header .header-logo {
-    max-height: 75px; }
+    max-height: 35px; }
   #header #logo-wrapper {
     text-align: center; }
   #header h1 {
@@ -352,7 +352,9 @@ img{
       #featured .feat-article .hover-featured a {
         color: #292929; }
   #featured .feat-img {
-    margin: 0 auto; }
+    margin: 0 auto;
+    border-radius: 15px;
+     }
 
 .featured-row h2{
   font-family: "Open Sans", sans-serif;
@@ -361,6 +363,7 @@ img{
   color: #fff;
   background-color: rgba(229, 0, 125, 1);
   padding: 0 10px;
+  border-radius: 5px;
   -webkit-transition: 200ms all ease-in-out;
   -moz-transition: 200ms all ease-in-out;
   -ms-transition: 200ms all ease-in-out;
@@ -392,7 +395,12 @@ img{
   display: block; }
 
 #news-cover .cover-pic {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+}
+
+#news-cover .cover-pic img{
+  border-radius: 15px;
+}
 
 #news-cover .cover-date {
   margin-top: 15px;
