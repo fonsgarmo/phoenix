@@ -38,6 +38,8 @@
 				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 			?>
         	<div class="col-12" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php _e('Isotipo de pekesims', 'phoenix'); ?>"/></a></div>
+          </div>
+          <div class="row" id="menu-header-row">
         	<div class="col-12" id="menu-wrapper">
 	            <?php
 					wp_nav_menu( array(
@@ -45,6 +47,7 @@
 					'menu_id'        => 'main-menu'
 					) );
 				?>
+          </div>
           </div>
           <div class="col-md-1 d-none">
             <p class="search-icon text-center"><a href="#"><i class="icon-magnifier"></i></a></p>
