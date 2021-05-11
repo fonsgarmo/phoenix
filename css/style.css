@@ -357,8 +357,8 @@ img{
      }
 
 .featured-row h2{
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-transform: none;
   font-weight: 800;
   color: #fff;
   background-color: rgba(229, 0, 125, 1);
@@ -953,7 +953,7 @@ img{
     }
 
     #news-cover .cover-pic{
-      min-height: 186px;
+      min-height: 150px;
     }
   }
 
@@ -964,7 +964,7 @@ img{
     }
 
     #news-cover .cover-pic{
-      min-height: 300px;
+      min-height: 150px;
     }
 
   }
@@ -998,7 +998,7 @@ img{
     }
 
     #news-cover .cover-pic{
-      min-height: 250px;
+      min-height: 150px;
     }
   }
 
@@ -1029,7 +1029,7 @@ img{
     }
 
     #news-cover .cover-pic{
-      min-height: 184px;
+      min-height: 115px;
     }
 
     #news-cover .grid-title-module{
