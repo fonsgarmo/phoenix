@@ -14,6 +14,14 @@
     <div class="grid-title-module">
         <h4 class="cover-date"><?php echo get_the_date('d.m.Y') ?> | <strong><?php _e('Por', 'phoenix'); ?> </strong><?php the_author(); ?></h4>
     	<a href="<?php the_permalink(); ?>">
-        	<h3 class="cover-title"><?php the_title(); ?><span class="icon-arrow-right" style="margin-left: 10px"></span></h3>
+        	<h3 class="cover-title"><?php 
+        	
+        	$thetitle = $post->post_title; /* or you can use get_the_title() */
+			$getlength = strlen($thetitle);
+			$thelength = 65;
+			echo substr($thetitle, 0, $thelength);
+			if ($getlength > $thelength) echo "...";
+
+        	?><span class="icon-arrow-right" style="margin-left: 10px"></span></h3>
         </a>
     </div>

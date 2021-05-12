@@ -28,7 +28,7 @@ h3 {
 
 h3.cover-title {
   font-family: "Montserrat", serif;
-  font-size: 19px;
+  font-size: 15px;
   font-weight: 800;
   text-transform: uppercase;
   margin-top: 0;
@@ -59,7 +59,11 @@ a:hover {
   text-decoration: none !important; }
 
 img{
-  border-radius: 4px;
+  border-radius: 5px !important;
+}
+
+.wp-block-image img{
+  border-radius: 5px;
 }
 
 #featured img{
@@ -307,6 +311,10 @@ img{
         text-decoration: none;
         color: #e0e0e0; }
 
+#menu-pie{
+  padding-left: 0;
+}
+
 #featured {
   margin-top: 50px; }
   #featured .featured-row {
@@ -316,6 +324,7 @@ img{
     #featured .feat-article .hover-featured {
       position: absolute;
       background-color: rgba(242, 242, 242, 0.5);
+      border-radius: 15px;
       top: 0;
       left: 0;
       padding-left: 15px;
@@ -386,6 +395,33 @@ img{
 
 #archive #archive-sideon .home-blog {
   margin-bottom: 25px; }
+
+#archive #archive-sideon .home-blog img {
+  border-radius: 15px; }
+
+.archive-title-container{
+  background-image: url("https://cdn.pekesims.com/static/rayas_pks2021-30.png");
+  background-color: #e5007d;
+  margin-bottom: 35px;
+}
+
+.archive-title-container h1{
+  text-transform: none;
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.post-title-container{
+  background-image: url("https://cdn.pekesims.com/static/ondas_pks2021.png");
+  background-color: #00AFF1;
+  margin-bottom: 35px;
+}
+
+.post-title-container h1{
+  text-transform: none;
+  font-size: 40px;
+  margin: 15px 0;
+}
 
 #search-results #search-sideon .home-blog {
   margin-bottom: 25px; }
@@ -458,12 +494,14 @@ img{
 }
 
 .descargas-home{
+  background-image: url("https://cdn.pekesims.com/static/ondas_pks2021.png");
   background-color: #00AFF1;
   padding-top:15px;
   padding-bottom: 15px;
 }
 
 .sda-home{
+  background-image: url("https://cdn.pekesims.com/static/puntos_pks2021.png");
   background-color: #23d15d;
   padding-top:15px;
   padding-bottom: 15px;
@@ -500,9 +538,11 @@ img{
   }
 
   .phoenix-sidebar .widget-title{
-    background-color: #e5007d;
-    color: #fff;
-    padding: 0 10px;
+    color: #e5007d;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: right;
+    text-transform: none;
   }
 
   .phoenix-sidebar .widget_custom_lpw_latest_posts img{
@@ -523,11 +563,6 @@ img{
   .widget-area img{
     max-width: 100%;
     height: auto;
-  }
-
-  .phoenix-sidebar .widget-title{
-    font-weight: 800;
-    font-size: 22px;
   }
 
   .mailchimp-title{
@@ -672,7 +707,7 @@ img{
   }
 
   #header-search-row{
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     top: -3020px;
@@ -801,20 +836,13 @@ img{
   }
 
   .individual-title{
-    background-color: #00AFF1;
     color: #fff;
-    padding: 0 20px;
-    display: inline;
     line-height: 1.35;
   }
 
-  .individual-title span{
+  /*.individual-title span{
     background-color: #00AFF1;
-  }
-
-  .individual-intro{
-    margin-top: 35px;
-  }
+  }*/
 
   #individual-page .individual-intro{
     margin-bottom: 25px;
@@ -824,11 +852,6 @@ img{
     margin-top: 10px;
     margin-bottom: 25px;
     color: #fff; }
-
-  .individual-date span{
-    background-color: #e5007d;
-    padding: 0 20px;
-  }
 
   #individual-content img{
     max-width: 100%;
@@ -860,25 +883,40 @@ img{
 
   }
 
+  .comments-title{
+    border-top: 3px solid #e0e0e0;
+    margin-top: 25px;
+  }
+
+  .comments-title h3{
+    font-size: 35px;
+    color: #00AFF1;
+    margin: 15px 0 5px 0;
+  }
+
+  .comments-title span{
+    display: inline-block;
+    margin: 5px 0 5px 0;
+  }
+
   .single-comments{
     padding-top: 25px;
-    margin: 25px 0;
-    border-top: 3px solid #e0e0e0;
+    margin: 5px 0;
 
   }
 
   .single-categories h4 span{
-    background-color: #e5007d;
-    padding: 0 20px;
-    color: #fff;
+    padding: 0 ;
+    color: #e5007d;
+    text-transform: none;
   }
 
   .single-categories h4 span a{
-    color: #fff;
+    color: #e5007d;
   }
 
   .single-categories h4 span a:hover{
-    color: #e0e0e0;
+    text-decoration: underline;
   }
 
       /* Archivo */
@@ -887,11 +925,11 @@ img{
     color: #fff;
   }
 
-  .archive-title span{
+  /*.archive-title span{
     background-color: #e5007d;
     padding: 0 20px;
     background-clip: border-box;
-  }
+  }*/
 
   .archive-pagination{
     /*margin-top: -50px;*/
@@ -1049,7 +1087,7 @@ img{
     }
 
     #news-cover .cover-pic{
-      min-height: 150px;
+      min-height: 100px;
     }
   }
 

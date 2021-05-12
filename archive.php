@@ -16,14 +16,15 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 	<section id="archive">
-		<div class="container">
+		<div class="container-fluid archive-title-container">
 			<div class="row">
-				<div class="col-md-9">
+				<div class="col-md-8 offset-md-2">
 					<h1 class="archive-title"><span><?php the_archive_title(); ?></span></h1>
 				</div>
 			</div>
-			
+		</div>
 
+		<div class="container">
 		<?php 
 			$columns_num = 2; // Columnas a mostrar
 				$i = 0; //Contador de filas .row divs

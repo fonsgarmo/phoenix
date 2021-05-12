@@ -133,7 +133,7 @@
 			$columns_num = 3; // Numero de columnas
 				$i = 0; //Contador para divs .row
 				echo '<div class="col-lg-8 offset-lg-2">';
-				echo '<div class="row descargas-home">';
+				echo '<div class="row descargas-home-in">';
 
 				    /* Loop */
 				    while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -178,7 +178,7 @@
 			$columns_num = 3; // Numero de columnas
 				$i = 0; //Contador para divs .row
 				echo '<div class="col-lg-8 offset-lg-2">';
-				echo '<div class="row sda-home">';
+				echo '<div class="row sda-home-in">';
 
 				    /* Loop */
 				    while ( $the_query->have_posts() ) : $the_query->the_post();
