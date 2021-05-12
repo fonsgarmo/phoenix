@@ -59,7 +59,7 @@ a:hover {
   text-decoration: none !important; }
 
 img{
-  border-radius: 5px !important;
+  border-radius: 5px;
 }
 
 .wp-block-image img{
