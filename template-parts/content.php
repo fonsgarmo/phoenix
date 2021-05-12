@@ -29,7 +29,7 @@
           </div>
           <div class="comments-title">
             <h3>Comentarios</h3>
-            <span>Cuéntamos que piensas</span>
+            <span>Cuéntanos que piensas</span>
           </div>       
           <div class="single-comments">
             <?php if ( comments_open() || get_comments_number() ) :
