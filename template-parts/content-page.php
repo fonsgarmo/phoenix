@@ -25,12 +25,14 @@
         <div id="individual-content">
           <?php the_content(); ?>
         </div>
-        <div class="comments-title">
-            <h3>Comentarios</h3>
-            <span>Cuéntanos que piensas</span>
-          </div>
+        
         <div class="single-comments">
-          <?php if ( comments_open() || get_comments_number() ) :
+          <?php if ( comments_open() || get_comments_number() ) :?>
+            <div class="comments-title">
+              <h3>Comentarios</h3>
+              <span>Cuéntanos que piensas</span>
+            </div>
+           <?php 
           comments_template(); 
           endif; ?>
         </div>

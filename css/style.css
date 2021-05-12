@@ -988,9 +988,9 @@ img{
 
   /* No results page */
 
-  #search-results{
+  /*#search-results{
     min-height: 100vh;
-  }
+  }*/
 
   .results-not-found h1{
     background-color: #e5007d;
@@ -1001,11 +1001,7 @@ img{
   /* Search */
 
   .search-title span{
-    background-color: #e5007d;
-    padding: 0 20px;
     color: #fff;
-    background-clip: border-box;
-    margin: 24.9px 0;
   }
 
   #search-results .cover-date {
@@ -1013,7 +1009,7 @@ img{
   color: #e5007d; }
 
   #search-results .grid-title-module{
-    min-height: 143px;
+    min-height: 25px;
   }
 
   #search-results .cover-pic{
@@ -1031,6 +1027,10 @@ img{
   .rpwe-thumb{
     border: none !important;
     padding: 0 !important;
+  }
+
+  .search-results .grid-title-module{
+    margin-bottom: 25px;
   }
 
   /* Media querys WP */
@@ -1079,7 +1079,7 @@ img{
     }
 
     #archive .grid-title-module{
-      min-height: 120px;
+      min-height: 50px;
     }
 
     #search-results .cover-pic{
@@ -1087,11 +1087,11 @@ img{
     }
 
     #search-results .grid-title-module{
-      min-height: 176px;
+      min-height: 95px;
     }
 
     #archive .home-blog{
-      margin-bottom: 50px;
+      margin-bottom: 25px;
     }
 
     #news-cover .cover-pic{
@@ -1114,7 +1114,7 @@ img{
     }
 
     #search-results .grid-title-module{
-      min-height: 176px;
+      min-height: 50px;
     }
 
     #archive .home-blog{
@@ -1122,7 +1122,7 @@ img{
     }
 
     #search-results .home-blog{
-      margin-bottom: 50px;
+      margin-bottom: 25px;
     }
 
     #news-cover .cover-pic{

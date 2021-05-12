@@ -10,15 +10,18 @@
 get_header();
 ?>
 
-	<div id="search-results" class="container">
+	<div id="search-results" class="container-fluid archive-title-container">
 		<div class="row">
 
 		<?php if ( have_posts() ) : ?>
-				<div class="col-xl-9">
+				<div class="col-md-8 offset-md-2">
 					<h1 class="search-title">
 						<span><?php _e('Resultados de la búsqueda para ', 'phoenix') ?><b><?php echo get_search_query(); ?></b></span>
 					</h1>
 				</div>
+		</div>
+	</div>
+	<div id="archive" class="container search-results">
 			<?php 
 			$columns_num = 2; // Columnas a mostrar
 				$i = 0; //Contador de filas .row divs
