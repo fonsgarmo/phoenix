@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<section id="individual-page">
-		<div class="container">
+		<!--<div class="container">-->
 
 		<?php
 		while ( have_posts() ) :
@@ -28,7 +28,7 @@ get_header();
 		?>
 
 
-		</div><!-- Container end -->
+		<!--</div> Container end -->
 	</div>
 
 <?php

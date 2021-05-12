@@ -17,12 +17,12 @@
 get_header();
 ?>
 
-<section class="d-none d-lg-block" id="featured">
+<section class="d-lg-block" id="featured">
 	<div class="container">
 	<?php if ( have_rows( 'fila_1' ) ) : ?>
 	<?php while ( have_rows( 'fila_1' ) ) : the_row(); ?>
 	<div class="row featured-row">
-	  <div class="col-md-7 text-center">
+	  <div class="col-md-7 order-5 text-center feat-1">
 	  	<?php if ( get_sub_field( 'imagen_1' ) ) { ?>
 	    <div class="feat-article"><img class="img-fluid feat-img" src="<?php the_sub_field( 'imagen_1' ); ?>" alt="<?php the_sub_field( 'titulo_1' ); ?>"/>
 	    <?php } ?>
@@ -36,7 +36,7 @@ get_header();
 	      </div>
 	    </div>
 	  </div>
-	  <div class="col-md-5 text-center">
+	  <div class="col-md-5 order-xs-first order-md-last text-center feat-2">
 	  	<?php if ( get_sub_field( 'imagen_2' ) ) { ?>
 	    <div class="feat-article"><img class="img-fluid feat-img" src="<?php the_sub_field( 'imagen_2' ); ?>" alt="<?php the_sub_field( 'titulo_2' ); ?>"/>
 	    <?php } ?>
@@ -57,7 +57,7 @@ get_header();
 	<?php if ( have_rows( 'fila_2' ) ) : ?>
 	<?php while ( have_rows( 'fila_2' ) ) : the_row(); ?>
 	<div class="row featured-row">
-	  <div class="col-md-5 text-center">
+	  <div class="col-md-5 text-center feat-3">
 	  	<?php if ( get_sub_field( 'imagen_3' ) ) { ?>
 	    <div class="feat-article"><img class="img-fluid feat-img" src="<?php the_sub_field( 'imagen_3' ); ?>" alt="<?php the_sub_field( 'titulo_3' ); ?>"/>
 	    <?php } ?>
@@ -71,7 +71,7 @@ get_header();
 	      </div>
 	    </div>
 	  </div>
-	  <div class="col-md-7 text-center">
+	  <div class="col-md-7 text-center feat-4">
 	  	<?php if ( get_sub_field( 'imagen_4' ) ) { ?>
 	    <div class="feat-article"><img class="img-fluid feat-img" src="<?php the_sub_field( 'imagen_4' ); ?>" alt="<?php the_sub_field( 'titulo_4' ); ?>"/>
 	    <?php } ?>

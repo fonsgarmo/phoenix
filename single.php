@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<section id="individual-article <?php the_ID(); ?>" <?php post_class(); ?>>
-	      <div class="container">
+	      <!--<div class="container"> -->
 
 		<?php
 		while ( have_posts() ) :
@@ -25,7 +25,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		</div><!-- Container end -->
+		<!--</div> Container end -->
 	</section>
 
 <?php

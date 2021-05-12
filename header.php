@@ -37,8 +37,10 @@
           	<?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 			?>
-        	<div class="col-md-1 col-lg-1 col-xl-1 col-1" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php _e('Isotipo de pekesims', 'phoenix'); ?>"/></a></div>
-        	<div class="col-md-10 col-lg-10 col-xl-10" id="menu-wrapper">
+        	<div class="col-12" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php _e('Isotipo de pekesims', 'phoenix'); ?>"/></a></div>
+          </div>
+          <div class="row" id="menu-header-row">
+        	<div class="col-12" id="menu-wrapper">
 	            <?php
 					wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -46,11 +48,12 @@
 					) );
 				?>
           </div>
-          <div class="col-md-1">
+          </div>
+          <div class="col-md-1 d-none">
             <p class="search-icon text-center"><a href="#"><i class="icon-magnifier"></i></a></p>
           </div>
         </div>
-        <div class="row" id="header-search-row">
+        <div class="" id="header-search-row">
           <div class="col-md-8 text-center">
             <h3 class="search-instructions"><?php _e('Introduce un término de búsqueda y pulsa enter', 'phoenix');  ?></h3>
           </div>
