@@ -284,7 +284,7 @@ img{
     -ms-flex-align: center;
     align-items: center; }
   #footer .footer-logo {
-    height: 35px; }
+    height: 75px; }
   #footer .footer-copy {
     color: #fff;
     font-size: 10px;
@@ -1025,6 +1025,14 @@ img{
     border-top: 3px solid #e0e0e0;
   }
 
+
+  /*Sidebar posts*/
+
+  .rpwe-thumb{
+    border: none !important;
+    padding: 0 !important;
+  }
+
   /* Media querys WP */
 
   @media (max-width: 531px){
@@ -1145,6 +1153,15 @@ img{
   margin-bottom: 25px;
 }
 
+#featured{
+  margin-top: 100px !important;
+}
+
+
+.post-title-container, .archive-title-container{
+      margin-top: 75px;
+    }
+
   #logo-wrapper {
     text-align: left;
     margin-left: 10px; }
@@ -1157,7 +1174,7 @@ img{
   .home-blog {
     margin-bottom: 0px !important; }
   .single-article {
-    margin-bottom: 50px; } }
+    margin-bottom: 25px; } }
 
 @media (max-width: 992px) {
   #footer-menu {
