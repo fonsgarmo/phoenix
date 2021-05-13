@@ -19,7 +19,7 @@ get_header();
 		<div class="container-fluid archive-title-container">
 			<div class="row">
 				<div class="col-md-8 offset-md-2">
-					<h1 class="archive-title"><span><?php the_archive_title(); ?></span></h1>
+					<h1 class="archive-title"><?php the_archive_title(); ?></h1>
 				</div>
 			</div>
 		</div>

@@ -16,7 +16,7 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 				<div class="col-md-8 offset-md-2">
 					<h1 class="search-title">
-						<span><?php _e('Resultados de la búsqueda para ', 'phoenix') ?><b><?php echo get_search_query(); ?></b></span>
+						<?php _e('Resultados de la búsqueda para ', 'phoenix') ?><b><?php echo get_search_query(); ?></b>
 					</h1>
 				</div>
 		</div>

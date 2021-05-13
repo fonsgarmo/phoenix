@@ -12,7 +12,7 @@
 <div class="container-fluid post-title-container">
   <div class="row individual-intro">
     <div class="col-md-8 offset-md-2 col-10 offset-1">
-      <h1 class="individual-title"><span><?php the_title(); ?></span></h1>
+      <h1 class="individual-title"><?php the_title(); ?></h1>
       <h4 class="individual-date"><span><?php the_date('d.m.Y') ?> | <strong><?php _e('Por', 'phoenix'); ?></strong> <?php the_author(); ?></span></h4>
     </div>
   </div>

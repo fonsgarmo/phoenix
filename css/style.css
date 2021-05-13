@@ -408,6 +408,7 @@ img{
 .archive-title-container h1{
   text-transform: none;
   font-size: 40px;
+  color: #fff;
   margin: 15px 0;
 }
 
@@ -569,9 +570,10 @@ img{
     color: #fff;
   }
 
-  .mailchimp-title span{
-    background-color: #e5007d;
-    padding: 0 10px;
+  .mailchimp-title{
+    color: #e5007d;
+    text-transform: none;
+    text-align: right;
   }
 
   .sk-list{
