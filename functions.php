@@ -68,6 +68,9 @@ if ( ! function_exists( 'phoenix_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		//Theme support for responsive embeds
+		add_theme_support( 'responsive-embeds' );
+
 		/**
 		 * Add support for core custom logo.
 		 *
@@ -78,6 +81,55 @@ if ( ! function_exists( 'phoenix_setup' ) ) :
 			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
+		) );
+
+		/*Colores personalizados pekesims*/
+		add_theme_support( 'editor-color-palette', array(
+		    array(
+		        'name' => 'Magenta pekesims',
+		        'slug' => 'magenta-pekesims',
+		        'color' => '#e6007d',
+		    ),
+		    array(
+		        'name' => 'Azul pekesims',
+		        'slug' => 'azul-pekesims',
+		        'color' => '#00aeef',
+		    ),
+		    array(
+		        'name' => 'Verde pekesims',
+		        'slug' => 'verde-pekesims',
+		        'color' => '#23d15d',
+		    ),
+		    array(
+		        'name' => 'Magenta oscuro pekesims',
+		        'slug' => 'magenta-osc-pekesims',
+		        'color' => '#91004f',
+		    ),
+		    array(
+		        'name' => 'Azul oscuro pekesims',
+		        'slug' => 'azul-osc-pekesims',
+		        'color' => '#0189bc',
+		    ),
+		    array(
+		        'name' => 'Verde oscuro pekesims',
+		        'slug' => 'verde-osc-pekesims',
+		        'color' => '#15a445',
+		    ),
+		    array(
+		        'name' => 'Rojo',
+		        'slug' => 'rojo',
+		        'color' => '#df1616',
+		    ),
+		    array(
+		        'name' => 'Negro',
+		        'slug' => 'negro',
+		        'color' => '#000000',
+		    ),
+		    array(
+		        'name' => 'Blanco',
+		        'slug' => 'blanco',
+		        'color' => '#ffffff',
+		    ),
 		) );
 	}
 endif;
@@ -164,7 +216,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 function wpb_add_google_fonts() {
-	wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600;700;800&display=swap', false);
+	wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600;700;800&display=swap', array(), null );
 }
 
 add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');

@@ -858,6 +858,7 @@ img{
   #individual-content img{
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
   }
 
   #individual-content a{
