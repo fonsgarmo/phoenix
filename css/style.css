@@ -390,7 +390,7 @@ img{
 }
 
 
-#news-cover .home-blog {
+#news-cover .home-blog, #destacados-home .home-blog {
   margin-bottom: 25px; }
 
 #archive #archive-sideon .home-blog {
@@ -435,7 +435,7 @@ img{
   margin-bottom: 15px;
 }
 
-#news-cover .cover-pic img{
+#news-cover .cover-pic img, #destacados-home .cover-pic img{
   border-radius: 15px;
 }
 
@@ -462,7 +462,8 @@ img{
     height: auto;
   }
 
-.title-home-noticias, .title-home-tutoriales, .title-home-descargas, .title-home-sda
+
+.title-home-noticias, .title-home-tutoriales, .title-home-descargas, .title-home-sda, .title-home-destacados
 {
   margin-bottom: 0;
   text-transform: none;
@@ -470,11 +471,11 @@ img{
 
 }
 
-.title-home-tutoriales, .title-home-descargas, .title-home-sda{
+.title-home-tutoriales, .title-home-descargas, .title-home-sda, .title-home-destacados{
   color: #fff;
 }
 
-.more-news, .more-tutorials, .more-descargas, .more-sda{
+.more-news, .more-tutorials, .more-descargas, .more-sda, .title-home-destacados{
   display: block;
   margin-bottom: 25px;
 }
@@ -508,11 +509,16 @@ img{
   padding-bottom: 15px;
 }
 
-.articulos-home .cover-date, .descargas-home .cover-date, .sda-home .cover-date{
+.articulos-home .cover-date, .descargas-home .cover-date, .sda-home .cover-date, .home-destacados-grid .cover-date{
   color: #fff !important;
 }
 
-.articulos-home .cover-title, .descargas-home .cover-title, .sda-home .cover-title{
+.home-destacados-grid .cover-date{
+  margin-top: 15px;
+  margin-bottom: 3px;
+}
+
+.articulos-home .cover-title, .descargas-home .cover-title, .sda-home .cover-title, .home-destacados-grid .cover-title{
   color: #fff !important;
 }
 
@@ -796,6 +802,16 @@ img{
   .home-strip h4:hover{
     color: #e0e0e0;
   }
+
+.destacados-container{
+  background-image: url('https://cdn.pekesims.com/static/pekesims_degradado2021.jpg');
+}
+
+@media (max-width: 768px) {
+ .destacados-container{
+    background-image: url('https://cdn.pekesims.com/static/pekesims_degradado2021_vertical.jpg');
+  } 
+}
 
     /* Posts */
 
