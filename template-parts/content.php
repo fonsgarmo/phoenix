@@ -27,14 +27,33 @@
           <div class="single-categories">
             <h4><span><?php _e('Publicado en: ', 'phoenix'); ?> <?php the_category(', '); ?></span></h4>
           </div>
-          <div class="comments-title">
-            <h3>Comentarios</h3>
-            <span>Cuéntanos que piensas</span>
-          </div>       
-          <div class="single-comments">
-            <?php if ( comments_open() || get_comments_number() ) :
-            comments_template(); 
-          endif; ?>
+
+
+
+            <div id="author-info">
+              <div id="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 96 ); ?></div>
+                <div id="author-details">
+                  <?php $tw_user = get_the_author_meta('twitter');
+                    $ig_url = get_the_author_meta('instagram'); ?>
+                  <p><a href="https://www.twitter.com/<?php echo $tw_user; ?>">Twitter</a></p>
+                  <p><a href="<?php echo $ig_url;?>">Instagram</a></p>
+                  <h2>Artículo escrito por </strong> <?php the_author(); ?></h2>
+                  <?php the_author_description(); ?>
+                </div><!-- #author-details -->
+            </div><!-- #author-bio -->
+
+
+
+          <div class="comments-container">
+            <div class="comments-title">
+              <h3>Comentarios</h3>
+              <span>Cuéntanos que piensas</span>
+            </div>       
+            <div class="single-comments">
+              <?php if ( comments_open() || get_comments_number() ) :
+              comments_template(); 
+            endif; ?>
+            </div>
           </div>
       </div>
     </div>

@@ -20,11 +20,12 @@
 		'category_name' => 'destacados',
 		) ?>
 <?php $the_query = new WP_Query( $args ); ?>
+<?php if ($the_query->have_posts() ){ ?>
 <section id="destacados-home">
 	<div class="container-fluid destacados-container">
 		<div class="row">
 			<div class="col-lg-8 offset-lg-2">
-				<h3 class="title-home-destacados">Destacados</h3>
+				<h3 class="title-home-destacados"><span>Destacados</span></h3>
 			</div>	
 		</div>
 		<div class="row home-destacados-grid">
@@ -58,7 +59,11 @@
 	</div>
 
 </section>
-
+<?php }
+else {
+	
+}; ?>
+<!-- Query noticias-->
 <?php 
 	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 	$args = array(
@@ -70,6 +75,7 @@
 		'category_name' => 'noticias',
 		) ?>
 <?php $the_query = new WP_Query( $args ); ?>
+
 <section id="home-widget">
 	<div class="container">
 			<div class="row">
@@ -115,7 +121,7 @@
 		 ?>
 		 <?php wp_reset_query(); ?> 
 		</div>
-
+<!-- Query artículos -->
 		 <?php 
 	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 	$args = array(
@@ -161,7 +167,7 @@
 
 		 </div>
 
-
+<!-- Query descargas -->
 		 <?php 
 			$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 			$args = array(
@@ -207,6 +213,7 @@
 
 		 </div>
 
+<!-- Query Sims de antaño -->
 		 <?php 
 			$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 			$args = array(

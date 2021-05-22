@@ -9,25 +9,25 @@ body {
   color: #292929; }
 
 h1 {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase; }
 
 h2 {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 27px;
   font-weight: normal;
   text-transform: uppercase; }
 
 h3 {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-weight: bold;
   text-transform: uppercase; }
 
 h3.cover-title {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 800;
   text-transform: uppercase;
@@ -39,7 +39,7 @@ a h3.cover-title:hover{
   text-decoration: none; }
 
 h4 {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 15px;
   text-transform: uppercase; }
 h4.cover-date{
@@ -394,7 +394,7 @@ img{
   margin-bottom: 25px; }
 
 #archive #archive-sideon .home-blog {
-  margin-bottom: 25px; }
+  margin-bottom: 25px; } 
 
 #archive #archive-sideon .home-blog img {
   border-radius: 15px; }
@@ -475,6 +475,12 @@ img{
   color: #fff;
 }
 
+.title-home-destacados span{
+  background-color: #e5007d;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .more-news, .more-tutorials, .more-descargas, .more-sda, .title-home-destacados{
   display: block;
   margin-bottom: 25px;
@@ -509,7 +515,7 @@ img{
   padding-bottom: 15px;
 }
 
-.articulos-home .cover-date, .descargas-home .cover-date, .sda-home .cover-date, .home-destacados-grid .cover-date{
+.articulos-home .cover-date, .descargas-home .cover-date, .sda-home .cover-date{
   color: #fff !important;
 }
 
@@ -518,7 +524,7 @@ img{
   margin-bottom: 3px;
 }
 
-.articulos-home .cover-title, .descargas-home .cover-title, .sda-home .cover-title, .home-destacados-grid .cover-title{
+.articulos-home .cover-title, .descargas-home .cover-title, .sda-home .cover-title{
   color: #fff !important;
 }
 
@@ -742,19 +748,21 @@ img{
     min-height: 300px;
   }
 
-  #news-cover.cover-date{
+  #news-cover.cover-date, .home-destacados-grid .cover-date{
     margin-bottom: 3px;
     margin-top: 15px;
     color: #e5007d;
   }
 
   .pagination{
-    font-family: "Open Sans", sans-serif;
-    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 50px;
+    display: inline;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
   .pag-box{
@@ -803,7 +811,7 @@ img{
     color: #e0e0e0;
   }
 
-.destacados-container{
+/*.destacados-container{
   background-image: url('https://cdn.pekesims.com/static/pekesims_degradado2021.jpg');
 }
 
@@ -811,7 +819,7 @@ img{
  .destacados-container{
     background-image: url('https://cdn.pekesims.com/static/pekesims_degradado2021_vertical.jpg');
   } 
-}
+}*/
 
     /* Posts */
 
@@ -902,26 +910,34 @@ img{
 
   }
 
-  .comments-title{
+  .comments-container{
+    border-radius: 15px;
+    padding: 25px;
+    background-color: #00AFF1;
+  }
+
+  /*.comments-title{
     border-top: 3px solid #e0e0e0;
     margin-top: 25px;
-  }
+  }*/
 
   .comments-title h3{
     font-size: 35px;
-    color: #00AFF1;
-    margin: 15px 0 5px 0;
+    color: #fff;
+    margin: 0;
   }
 
   .comments-title span{
     display: inline-block;
-    margin: 5px 0 5px 0;
+    margin-bottom: 15px;
+    color: #fff;
   }
 
   .single-comments{
-    padding-top: 25px;
+    padding: 25px;
     margin: 5px 0;
-
+    background-color: #ffffff;
+    border-radius: 15px;
   }
 
   .single-categories h4 span{
