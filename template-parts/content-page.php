@@ -26,16 +26,18 @@
           <?php the_content(); ?>
         </div>
         
-        <div class="single-comments">
-          <?php if ( comments_open() || get_comments_number() ) :?>
-            <div class="comments-title">
+        <div class="comments-container row">
+            <div class="comments-title col-12">
               <h3>Comentarios</h3>
               <span>Cuéntanos que piensas</span>
+            </div>       
+            <div class="single-comments col-12">
+              <?php if ( comments_open() || get_comments_number() ) :
+              comments_template(); 
+            endif; ?>
             </div>
-           <?php 
-          comments_template(); 
-          endif; ?>
-        </div>
+          </div>
+          
       </div>
     </div>
   </div>
