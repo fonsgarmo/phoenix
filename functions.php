@@ -173,7 +173,7 @@ add_action( 'widgets_init', 'phoenix_widgets_init' );
  */
 function phoenix_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap/bootstrap.css');
-	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', '', '2.0.7_3');
+	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', '', '2.0.8');
 	wp_enqueue_style( 'line-icons', get_template_directory_uri() . '/css/simple-line-icons.css');
 
 	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js');

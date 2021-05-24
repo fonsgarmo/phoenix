@@ -3,6 +3,88 @@
   color: #fff;
 }
 
+/*Custom palettes*/
+
+.has-magenta-pekesims-background-color {
+    background-color: #e6007d;
+}
+ 
+.has-magenta-pekesims-color {
+    color: #e6007d;
+}
+
+.has-azul-pekesims-background-color {
+    background-color: #00aeef;
+}
+ 
+.has-azul-pekesims-color {
+    color: #00aeef;
+}
+
+.has-verde-pekesims-background-color {
+    background-color: #23d15d;
+}
+ 
+.has-verde-pekesims-color {
+    color: #23d15d;
+}
+
+.has-verde-pekesims-background-color {
+    background-color: #23d15d;
+}
+ 
+.has-verde-pekesims-color {
+    color: #23d15d;
+}
+
+.has-magenta-osc-pekesims-background-color {
+    background-color: #91004f;
+}
+ 
+.has-magenta-osc-pekesims-color {
+    color: #91004f;
+}
+
+.has-azul-osc-pekesims-background-color {
+    background-color: #0189bc;
+}
+ 
+.has-azul-osc-pekesims-color {
+    color: #0189bc;
+}
+
+.has-verde-osc-pekesims-background-color {
+    background-color: #15a445;
+}
+ 
+.has-verde-osc-pekesims-color {
+    color: #15a445;
+}
+
+.has-rojo-background-color {
+    background-color: #df1616;
+}
+ 
+.has-rojo-color {
+    color: #df1616;
+}
+
+.has-negro-background-color {
+    background-color: #000000;
+}
+ 
+.has-negro-color {
+    color: #000000;
+}
+
+.has-blanco-background-color {
+    background-color: #ffffff;
+}
+ 
+.has-blanco-color {
+    color: #ffffff;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;

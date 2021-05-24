@@ -8,7 +8,15 @@
  */
 
 ?>
-
+<section id="home-widget">
+	<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<?php dynamic_sidebar('home-adsense'); ?>
+				</div>
+			</div>
+		</div>
+</section>
 <?php 
 	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 	$args = array(
@@ -76,15 +84,7 @@ else {
 		) ?>
 <?php $the_query = new WP_Query( $args ); ?>
 
-<section id="home-widget">
-	<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<?php dynamic_sidebar('home-adsense'); ?>
-				</div>
-			</div>
-		</div>
-</section>
+
 <section id="news-cover">
 	<div class="container-fluid">
 		<div class="row">
