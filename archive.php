@@ -19,7 +19,7 @@ get_header();
 		<div class="container-fluid archive-title-container">
 			<div class="row">
 				<div class="col-md-8 offset-md-2">
-					<h1 class="archive-title"><span><?php the_archive_title(); ?></span></h1>
+					<h1 class="archive-title"><?php the_archive_title(); ?></h1>
 				</div>
 			</div>
 		</div>
@@ -30,7 +30,7 @@ get_header();
 				$i = 0; //Contador de filas .row divs
 
 				echo '<div class="row home-blog" style="margin-bottom: 0px">';
-					echo '<div id="archive-sideon" class="col-md-9 d-none d-lg-block">';
+					echo '<div id="archive-sideon" class="col-lg-9 col-12">';
 					echo '<div class="row home-blog">';
 
 				    /* Loop */
@@ -59,37 +59,17 @@ get_header();
 					echo '</div>';
 				echo '</div>';
 
-
-
-				echo '<div id="archive-sideoff" class="d-lg-none">';
-				echo '<div class="row home-blog d-lg-none">';
-				/* Loop para pantallas pequeñas sin sidebar */
-				    while ( have_posts() ) : the_post();
-				    	
-				        echo '<div class="single-article d-lg-none col-md-' . 12 / $columns_num . '">';
-
-				            get_template_part( 'template-parts/content', 'archive' );
-				            	
-				        echo '</div>';
-
-				        if($i % $columns_num == $columns_num - 1 ) {  
-
-				            echo '</div>  <div class="row home-blog d-lg-none">';
-				        }
-
-				        $i++;
-
-				    endwhile;
-
-				echo '</div>';
-				echo '</div>';
-
 		 ?>
 
 		 <div class="row archive-pagination">
-			 	<div class="col-md-4 offset-md-4">
-			 		<div class="archive-nav"><?php previous_posts_link( __('« Anterior', 'phoenix') ); ?>
-			 		<?php next_posts_link( __('Siguiente »', 'phoenix') ); ?></div>
+			 	<div class="col-md-12">
+			 			<?php the_posts_pagination( array(
+					    'mid_size'  => 2,
+					    'prev_text' => 'Anterior',
+					    'next_text' => 'Siguiente',
+					    'screen_reader_text' => ' ',
+					    'aria_label' => 'Paginación de archivos',
+					) ); ?>
 				</div>
 		 </div>
 	</div>

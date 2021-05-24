@@ -8,7 +8,70 @@
  */
 
 ?>
+<section id="home-widget">
+	<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<?php dynamic_sidebar('home-adsense'); ?>
+				</div>
+			</div>
+		</div>
+</section>
+<?php 
+	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
+	$args = array(
+		'nopaging' => false,
+		'post_type' => 'post',
+		'posts_per_page' => 3,
+		'order' => 'DESC',
+		'paged' => $page,
+		'category_name' => 'destacados',
+		) ?>
+<?php $the_query = new WP_Query( $args ); ?>
+<?php if ($the_query->have_posts() ){ ?>
+<section id="destacados-home">
+	<div class="container-fluid destacados-container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2">
+				<h3 class="title-home-destacados"><span>Destacados</span></h3>
+			</div>	
+		</div>
+		<div class="row home-destacados-grid">
 
+		<?php 
+			$columns_num = 3; // Numero de columnas
+				$i = 0; //Contador para divs .row
+				echo '<div class="col-lg-8 offset-lg-2">';
+				echo '<div class="row home-blog">';
+
+				    /* Loop */
+				    while ( $the_query->have_posts() ) : $the_query->the_post();
+
+				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
+				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
+				            get_template_part( 'template-parts/content', 'archive' );
+				        echo '</div>';
+
+				        if($i % $columns_num == $columns_num - 1 ) {  
+				            echo '</div> <div class="row home-blog">';
+				        }
+
+				        $i++;
+
+				    endwhile;
+				echo '</div>';    	
+				echo '</div>';
+		 ?>
+		 <?php wp_reset_query(); ?> 
+		</div>
+	</div>
+
+</section>
+<?php }
+else {
+	
+}; ?>
+<!-- Query noticias-->
 <?php 
 	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 	$args = array(
@@ -20,15 +83,8 @@
 		'category_name' => 'noticias',
 		) ?>
 <?php $the_query = new WP_Query( $args ); ?>
-<section id="home-widget">
-	<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<?php dynamic_sidebar('home-adsense'); ?>
-				</div>
-			</div>
-		</div>
-</section>
+
+
 <section id="news-cover">
 	<div class="container-fluid">
 		<div class="row">
@@ -65,7 +121,7 @@
 		 ?>
 		 <?php wp_reset_query(); ?> 
 		</div>
-
+<!-- Query artículos -->
 		 <?php 
 	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 	$args = array(
@@ -111,7 +167,7 @@
 
 		 </div>
 
-
+<!-- Query descargas -->
 		 <?php 
 			$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 			$args = array(
@@ -157,6 +213,7 @@
 
 		 </div>
 
+<!-- Query Sims de antaño -->
 		 <?php 
 			$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 			$args = array(

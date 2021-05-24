@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template for displaying archive pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Phoenix
  */
@@ -10,25 +10,27 @@
 get_header();
 ?>
 
-	<div id="search-results" class="container-fluid archive-title-container">
-		<div class="row">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
+
+	<section id="archive">
+		<div class="container-fluid archive-title-container">
+			<div class="row">
 				<div class="col-md-8 offset-md-2">
-					<h1 class="search-title">
-						<?php _e('Resultados de la búsqueda para ', 'phoenix') ?><b><?php echo get_search_query(); ?></b>
-					</h1>
+					<h1 class="archive-title"><?php the_archive_title(); ?></h1>
 				</div>
+			</div>
 		</div>
-	</div>
-	<div id="archive" class="container search-results">
-			<?php 
+
+		<div class="container">
+		<?php 
 			$columns_num = 2; // Columnas a mostrar
 				$i = 0; //Contador de filas .row divs
 
-				echo '<div class="row home-blog">';
-
-					echo '<div id="search-sideon" class="col-md-9 d-none d-lg-block">';
+				echo '<div class="row home-blog" style="margin-bottom: 0px">';
+					echo '<div id="archive-sideon" class="col-md-9 d-none d-lg-block">';
 					echo '<div class="row home-blog">';
 
 				    /* Loop */
@@ -58,9 +60,10 @@ get_header();
 				echo '</div>';
 
 
-				echo '<div id="search-sideoff" class="d-lg-none">';
+
+				echo '<div id="archive-sideoff" class="d-lg-none">';
 				echo '<div class="row home-blog d-lg-none">';
-				/* Loop para pantallas pequeñas sin sidebar */
+				/* Loop para pantallas pequeñas sin sidebar*/ 
 				    while ( have_posts() ) : the_post();
 				    	
 				        echo '<div class="single-article d-lg-none col-md-' . 12 / $columns_num . '">';
@@ -82,21 +85,22 @@ get_header();
 				echo '</div>';
 
 		 ?>
-		 <?php
-		else :
 
-			get_template_part( 'template-parts/content', 'none' );
+		 <div class="row archive-pagination">
+			 	<div class="col-md-4 offset-md-4">
+			 		<div class="archive-nav"><?php previous_posts_link( __('« Anterior', 'phoenix') ); ?>
+			 		<?php next_posts_link( __('Siguiente »', 'phoenix') ); ?></div>
+				</div>
+		 </div>
+	</div>
+</section>
 
-		endif;
+		<?php endif;
 		?>
-		</div>
-	<div class="row search-pagination">
-	 	<div class="col-md-4 offset-md-4">
-	 		<div class="archive-nav"><?php previous_posts_link( __('« Anterior', 'phoenix') ); ?>
-	 		<?php next_posts_link( __('Siguiente »', 'phoenix') ); ?></div>
-		</div>
-	 </div>
+
+		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
+
 get_footer();
