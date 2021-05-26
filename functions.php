@@ -178,7 +178,7 @@ function phoenix_scripts() {
 
 	wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js');
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js');
-	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js');
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', '', '2.0.8');
 
 
 
