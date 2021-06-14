@@ -1091,8 +1091,10 @@ img{
   }
 
   .ig-author{
+    float: left;
     font-size: 25px;
     font-weight: bold;
+    margin-right: 10px;
   }
 
       /* Archivo */
