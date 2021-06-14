@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
     $('.toggler-menu').on('click', function(){
         $(this).toggleClass('active');
         $('.mobile-menu').toggleClass('open');
