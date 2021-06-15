@@ -90,12 +90,18 @@ get_header();
 		endif;
 		?>
 		</div>
-	<div class="row search-pagination">
-	 	<div class="col-md-4 offset-md-4">
-	 		<div class="archive-nav"><?php previous_posts_link( __('« Anterior', 'phoenix') ); ?>
-	 		<?php next_posts_link( __('Siguiente »', 'phoenix') ); ?></div>
-		</div>
-	 </div>
+
+	<div class="row archive-pagination">
+			 	<div class="col-md-12">
+			 			<?php the_posts_pagination( array(
+					    'mid_size'  => 2,
+					    'prev_text' => 'Anterior',
+					    'next_text' => 'Siguiente',
+					    'screen_reader_text' => ' ',
+					    'aria_label' => 'Paginación de archivos',
+					) ); ?>
+				</div>
+		 </div>
 	</div><!-- #primary -->
 
 <?php
