@@ -13,6 +13,24 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+
+  <link rel="preconnect" href="https://adservice.google.com/">
+  <link rel="preconnect" href="https://googleads.g.doubleclick.net/">
+  <link rel="preconnect" href="https://www.googletagservices.com/">
+  <link rel="preconnect" href="https://tpc.googlesyndication.com/">
+  <link rel="prefetch" href="https://fonts.googleapis.com/">
+  <link rel="prefetch" href="https://fonts.gstatic.com/">
+  <link rel="prefetch" href="https://googletagmanager.com/">
+  <link rel="prefetch" href="https://google-analytics.com/">
+  <link rel="prefetch" href="https://google.com/">
+  <link rel="prefetch" href="https://cdn.pekesims.com/">
+  <link rel="prefetch" href="https://youtube.com/">
+  <link rel="prefetch" href="https://twitch.com/">
+  <link rel="preload" as="image" href="https://cdn.pekesims.com/wp-content/uploads/2021/06/10181315/Los-Sims-4-Vida-en-el-Pueblo-home.jpg">
+  <link rel="preload" as="image" href="https://cdn.pekesims.com/wp-content/uploads/2021/06/08122746/trucos_home.jpg">
+  <link rel="preload" href="/wp-content/plugins/mobile-menu/includes/css/font/mobmenu.woff2?31192480" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/wp-content/themes/Phoenix/fonts/Simple-Line-Icons.woff2?v=2.4.0" as="font" type="font/woff2" crossorigin>
+  
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -62,33 +80,6 @@
           </div>
           <div class="col-md-1">
             <p class="search-close text-left mx-auto"><a href="#"><i class="icon-close"></i></a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="d-md-none container-fluid" id="mobile-header">
-        <div class="row" id="header-row">
-          <div class="col-md-1 offset-md-1 col-4 col-sm-5" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="Isotipo de pekesims"/></a></div>
-          <div class="col-7 col-sm-6 d-block d-md-none hamburger-menu"><a class="toggler-menu"><span></span></a></div>
-        </div>
-        <div class="row mobile-menu">
-          <div class="col-md-8 col-12 offset-md-0" id="menu-wrapper">
-            <ul id="main-menu">
-        		<?php
-					wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'main-menu',
-					'menu_class'	=> 'link-menu'
-					) );
-				?>
-            </ul>
-          </div>
-          <div class="col-12">
-            <?php 
-                  add_filter( 'get_search_form', 'mobile_search_form' );
-                  get_search_form();
-                  remove_filter( 'get_search_form', 'mobile_search_form' ); 
-            ?>
           </div>
         </div>
       </div>
