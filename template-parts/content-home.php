@@ -20,19 +20,18 @@
 <?php 
 	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 	$args = array(
-		'nopaging' => false,
-		'post_type' => 'post',
 		'posts_per_page' => 3,
-		'order' => 'DESC',
-		'paged' => $page,
 		'category_name' => 'destacados',
-		) ?>
-<?php $the_query = new WP_Query( $args ); ?>
-<?php if ($the_query->have_posts() ){ ?>
+		'post_type' => 'post',
+		'page' => 1,
+	)
+?>
+<?php $the_query = get_posts( $args ); ?>
+<?php if ( have_posts() ){ ?>
 <section id="destacados-home">
 	<div class="container-fluid destacados-container">
 		<div class="row">
-			<div class="col-lg-8 offset-lg-2">
+			<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">
 				<h3 class="title-home-destacados"><span>Destacados</span></h3>
 			</div>	
 		</div>
@@ -41,11 +40,11 @@
 		<?php 
 			$columns_num = 3; // Numero de columnas
 				$i = 0; //Contador para divs .row
-				echo '<div class="col-lg-8 offset-lg-2">';
+				echo '<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">';
 				echo '<div class="row home-blog">';
 
 				    /* Loop */
-				    while ( $the_query->have_posts() ) : $the_query->the_post();
+				    foreach ( $the_query as $post){
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -58,11 +57,11 @@
 
 				        $i++;
 
-				    endwhile;
+				    }
 				echo '</div>';    	
 				echo '</div>';
 		 ?>
-		 <?php wp_reset_query(); ?> 
+		 <?php wp_reset_postdata(); ?> 
 		</div>
 	</div>
 
@@ -73,22 +72,18 @@ else {
 }; ?>
 <!-- Query noticias-->
 <?php 
-	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 	$args = array(
-		'nopaging' => false,
-		'post_type' => 'post',
 		'posts_per_page' => 9,
-		'order' => 'DESC',
-		'paged' => $page,
 		'category_name' => 'noticias',
-		) ?>
-<?php $the_query = new WP_Query( $args ); ?>
-
-
+		'post_type' => 'post',
+		'paged' => $page,
+	)
+		?>
+<?php $the_query = get_posts( $args ); ?>
 <section id="news-cover">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-8 offset-lg-2">
+			<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">
 				<h3 class="title-home-noticias">Últimas noticias</h3>
 				<span class="more-news"><a href="../category/noticias/">Ver todas ></a></span>
 			</div>	
@@ -98,11 +93,11 @@ else {
 		<?php 
 			$columns_num = 3; // Numero de columnas
 				$i = 0; //Contador para divs .row
-				echo '<div class="col-lg-8 offset-lg-2">';
+				echo '<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">';
 				echo '<div class="row home-blog">';
 
 				    /* Loop */
-				    while ( $the_query->have_posts() ) : $the_query->the_post();
+				    foreach ( $the_query as $post){
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -115,26 +110,25 @@ else {
 
 				        $i++;
 
-				    endwhile;
+				    }
 				echo '</div>';    	
 				echo '</div>';
 		 ?>
-		 <?php wp_reset_query(); ?> 
+		 <?php wp_reset_postdata(); ?> 
 		</div>
+
 <!-- Query artículos -->
 		 <?php 
-	$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
 	$args = array(
-		'nopaging' => false,
-		'post_type' => 'post',
 		'posts_per_page' => 3,
-		'order' => 'DESC',
-		'paged' => $page,
 		'category_name' => 'tutoriales',
-		) ?>
-<?php $the_query = new WP_Query( $args ); ?>
+		'post_type' => 'post',
+		'paged' => $page,
+	)
+		 ?>
+<?php $the_query = get_posts( $args ); ?>
 		<div class="row articulos-home">
-			<div class="col-lg-8 offset-lg-2">
+			<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">
 				<h3 class="title-home-tutoriales">Artículos y tutoriales</h3>
 				<span class="more-tutorials"><a href="/category/tutoriales/">Ver más ></a></span>
 			</div>
@@ -142,11 +136,11 @@ else {
 		<?php 
 			$columns_num = 3; // Numero de columnas
 				$i = 0; //Contador para divs .row
-				echo '<div class="col-lg-8 offset-lg-2">';
+				echo '<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">';
 				echo '<div class="row articulos-home-in">';
 
 				    /* Loop */
-				    while ( $the_query->have_posts() ) : $the_query->the_post();
+				    foreach ( $the_query as $post){
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -159,28 +153,25 @@ else {
 
 				        $i++;
 
-				    endwhile;
+				    }
 				echo '</div>';    	
 				echo '</div>';
 		 ?>
-		 <?php wp_reset_query(); ?> 
-
+		 <?php wp_reset_postdata(); ?> 
 		 </div>
 
 <!-- Query descargas -->
 		 <?php 
-			$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
-			$args = array(
-				'nopaging' => false,
-				'post_type' => 'post',
+		 	$args = array(
 				'posts_per_page' => 3,
-				'order' => 'DESC',
-				'paged' => $page,
 				'category_name' => 'descargas',
-				) ?>
-		<?php $the_query = new WP_Query( $args ); ?>
+				'post_type' => 'post',
+				'paged' => $page,
+			)
+		 ?>
+		<?php $the_query = get_posts( $args ); ?>
 		 <div class="row descargas-home">
-			<div class="col-lg-8 offset-lg-2">
+			<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">
 				<h3 class="title-home-descargas">Descargas</h3>
 				<span class="more-descargas"><a href="/category/descargas/">Ver más ></a></span>
 			</div>
@@ -188,11 +179,11 @@ else {
 		<?php 
 			$columns_num = 3; // Numero de columnas
 				$i = 0; //Contador para divs .row
-				echo '<div class="col-lg-8 offset-lg-2">';
+				echo '<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">';
 				echo '<div class="row descargas-home-in">';
 
 				    /* Loop */
-				    while ( $the_query->have_posts() ) : $the_query->the_post();
+				    foreach ( $the_query as $post){
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -205,28 +196,26 @@ else {
 
 				        $i++;
 
-				    endwhile;
+				    }
 				echo '</div>';    	
 				echo '</div>';
 		 ?>
-		 <?php wp_reset_query(); ?> 
+		 <?php wp_reset_postdata(); ?> 
 
 		 </div>
 
 <!-- Query Sims de antaño -->
 		 <?php 
-			$page = ( get_query_var( 'page' ) ) ? absint( get_query_var( 'page' ) ) : 1;
-			$args = array(
-				'nopaging' => false,
-				'post_type' => 'post',
+		 	$args = array(
 				'posts_per_page' => 3,
-				'order' => 'DESC',
-				'paged' => $page,
 				'category_name' => 'sims-antano',
-				) ?>
-		<?php $the_query = new WP_Query( $args ); ?>
+				'post_type' => 'post',
+				'paged' => $page,
+			)
+		 ?>
+		<?php $the_query = get_posts( $args ); ?>
 		 <div class="row sda-home">
-			<div class="col-lg-8 offset-lg-2">
+			<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">
 				<h3 class="title-home-sda">Sims de Antaño</h3>
 				<span class="more-sda"><a href="/category/descargas/ls4-descargas/sims-antano/">Ver más ></a></span>
 			</div>
@@ -234,11 +223,11 @@ else {
 		<?php 
 			$columns_num = 3; // Numero de columnas
 				$i = 0; //Contador para divs .row
-				echo '<div class="col-lg-8 offset-lg-2">';
+				echo '<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">';
 				echo '<div class="row sda-home-in">';
 
 				    /* Loop */
-				    while ( $the_query->have_posts() ) : $the_query->the_post();
+				    foreach ( $the_query as $post){
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -251,47 +240,13 @@ else {
 
 				        $i++;
 
-				    endwhile;
+				    }
 				echo '</div>';    	
 				echo '</div>';
 		 ?>
-		 <?php wp_reset_query(); ?> 
-
+		 <?php wp_reset_postdata(); ?> 
 		 </div>
 
-
-
-		<div class="row d-none">
-			<div class="col-md-12 text-right pagination">
-				<div class="pag-box">
-					<?php 
-
-					$big = 999999999; // need an unlikely integer
-
-					$args_pag = array(
-						'base'               => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-						'format'             => '/page/%#%',
-						'total'              => 45,
-						'current'            => max( 1, get_query_var('page') ),
-						'show_all'           => false,
-						'end_size'           => 2,
-						'mid_size'           => 2,
-						'prev_next'          => true,
-						'prev_text'          => __('« Anterior', 'phoenix'),
-						'next_text'          => __('Siguiente »', 'phoenix'),
-						'type'               => 'plain',
-						'add_args'           => false,
-						'add_fragment'       => '',
-						'before_page_number' => '',
-						'after_page_number'  => ''
-					); 
-					echo paginate_links( $args_pag ); ?>
-				</div>
-			</div>
-		</div>	
-		<div class="col-xl-6 offset-xl-3 text-center d-none">
-			<?php get_search_form(); ?>
-		</div>
 	</div>
 </section>
 

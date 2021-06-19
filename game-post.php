@@ -27,6 +27,17 @@ get_header();
 		      <div class="row">
 		        <div class="col-lg-12">
 		          <div id="individual-content" class="post-content">
+		          	<div class="row game-info" style="background-color: #222222; height: 250px; padding: 25px 25px;">
+		          		<div class="col-lg-4 game-info-cover" style="background-color: #fff;">
+		          			
+		          		</div>
+		          		<div class="col-lg-8 game-info-data">
+		          			<h2>Los Sims 4 Vida en el Pueblo</h2>
+		          			<h3>Pack de expansión</h3>
+		          			<p>22 de julio de 2021</p>
+		          			<a href=""><span class="game-buy-bt">Comprar en Origin</span></a>
+		          		</div>
+		          	</div>
 		            <?php the_content(); ?>
 		          </div>
 		          <div class="single-categories">
