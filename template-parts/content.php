@@ -28,34 +28,29 @@
             <span><?php _e('Publicado en: ', 'phoenix'); ?> <?php the_category(', '); ?></span>
           </div>
 
-
-
-            <div class="row" id="author-info">
-              <div class="col-lg-2 col-md-2 col-12 text-center d-flex align-items-center justify-content-center" id="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 96 ); ?></div>
-                <div class="col-lg-10 col-md-10 col-12" id="author-details">
-                  <p class="written-by-post">Escrito por </strong><?php the_author(); ?></p>
-                  <p class="author-description"><?php the_author_description(); ?></p>
-                  <?php $tw_user = get_the_author_meta('twitter');
-                    $ig_url = get_the_author_meta('instagram');
-                    $twitch_url = get_the_author_meta('myspace');?> 
-                  <a href="https://www.twitter.com/<?php echo $tw_user; ?>"><p class="icon-social-twitter tw-author"></p></a>
-                  <?php //Author has Instagram?
-                   if(empty($ig_url)): ?>
-                  <?php else:
-                    echo '<a href="', $ig_url,'"><p class="icon-social-instagram ig-author"></p></a>'; 
-                  endif;
-                  ?>
-                  <?php //Author has Twitch?
-                   if(empty($twitch_url)): ?>
-                  <?php else:
-                    echo '<a class="twitch-author" href="', $twitch_url,'"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-15.045h17.194v11.463zm-3.582-7.343v6.262h-2.149v-6.262h2.149zm-5.731 0v6.262h-2.149v-6.262h2.149z" fill-rule="evenodd" clip-rule="evenodd"/></svg></span></a>'; 
-                  endif;
-                  ?>
-                  
-                </div><!-- #author-details -->
-            </div><!-- #author-bio -->
-
-
+          <div class="row" id="author-info">
+            <div class="col-lg-2 col-md-2 col-12 text-center d-flex align-items-center justify-content-center" id="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 96 ); ?></div>
+              <div class="col-lg-10 col-md-10 col-12" id="author-details">
+                <p class="written-by-post">Escrito por </strong><?php the_author(); ?></p>
+                <p class="author-description"><?php the_author_description(); ?></p>
+                <?php $tw_user = get_the_author_meta('twitter');
+                  $ig_url = get_the_author_meta('instagram');
+                  $twitch_url = get_the_author_meta('myspace');?> 
+                <a href="https://www.twitter.com/<?php echo $tw_user; ?>"><p class="icon-social-twitter tw-author"></p></a>
+                <?php //Author has Instagram?
+                 if(empty($ig_url)): ?>
+                <?php else:
+                  echo '<a href="', $ig_url,'"><p class="icon-social-instagram ig-author"></p></a>'; 
+                endif;
+                ?>
+                <?php //Author has Twitch?
+                 if(empty($twitch_url)): ?>
+                <?php else:
+                  echo '<a class="twitch-author" href="', $twitch_url,'"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-15.045h17.194v11.463zm-3.582-7.343v6.262h-2.149v-6.262h2.149zm-5.731 0v6.262h-2.149v-6.262h2.149z" fill-rule="evenodd" clip-rule="evenodd"/></svg></span></a>'; 
+                endif;
+                ?>
+              </div><!-- #author-details -->
+          </div><!-- #author-bio -->
 
           <div class="comments-container row">
             <div class="comments-title col-12">
@@ -68,11 +63,11 @@
             endif; ?>
             </div>
           </div>
+        </div>
       </div>
     </div>
-  </div>
     <div class="col-lg-3 d-none d-lg-block phoenix-sidebar" id="single-sidebar">
       <?php get_sidebar(); ?>
     </div>
-  </div>
-</div>        
+  </div><!--.single-content-->
+</div><!--.container-->        

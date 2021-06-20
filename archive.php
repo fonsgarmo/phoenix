@@ -37,7 +37,6 @@ get_header();
 				    while ( have_posts() ) : the_post();
 				    	
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
-				        //echo '<div class="single-article col-lg-' . 12 / $columns_num . '">';
 
 				            get_template_part( 'template-parts/content', 'archive' );
 				            	

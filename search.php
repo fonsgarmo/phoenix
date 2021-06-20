@@ -9,11 +9,9 @@
 
 get_header();
 ?>
-
+	<?php if ( have_posts() ) : ?>
 	<div id="search-results" class="container-fluid archive-title-container">
 		<div class="row">
-
-		<?php if ( have_posts() ) : ?>
 				<div class="col-md-8 offset-md-2">
 					<h1 class="search-title">
 						<?php _e('Resultados de la búsqueda para ', 'phoenix') ?><b><?php echo get_search_query(); ?></b>
@@ -28,7 +26,7 @@ get_header();
 
 				echo '<div class="row home-blog">';
 
-					echo '<div id="search-sideon" class="col-md-9 d-none d-lg-block">';
+					echo '<div id="search-sideon" class="col-lg-9 col-12">';
 					echo '<div class="row home-blog">';
 
 				    /* Loop */
@@ -52,46 +50,13 @@ get_header();
 
 				echo '</div>';
 				echo '</div>';
-					echo '<div class="col-md-3 d-none d-lg-block phoenix-sidebar">';
+					echo '<div class="col-lg-3 d-none d-lg-block phoenix-sidebar">';
 						get_sidebar(); 
 					echo '</div>';
 				echo '</div>';
 
-
-				echo '<div id="search-sideoff" class="d-lg-none">';
-				echo '<div class="row home-blog d-lg-none">';
-				/* Loop para pantallas pequeñas sin sidebar */
-				    while ( have_posts() ) : the_post();
-				    	
-				        echo '<div class="single-article d-lg-none col-md-' . 12 / $columns_num . '">';
-
-				            get_template_part( 'template-parts/content', 'archive' );
-				            	
-				        echo '</div>';
-
-				        if($i % $columns_num == $columns_num - 1 ) {  
-
-				            echo '</div>  <div class="row home-blog d-lg-none">';
-				        }
-
-				        $i++;
-
-				    endwhile;
-
-				echo '</div>';
-				echo '</div>';
-
-		 ?>
-		 <?php
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-		</div>
-
-	<div class="row archive-pagination">
+			?>
+			<div class="row archive-pagination">
 			 	<div class="col-md-12">
 			 			<?php the_posts_pagination( array(
 					    'mid_size'  => 2,
@@ -101,8 +66,17 @@ get_header();
 					    'aria_label' => 'Paginación de archivos',
 					) ); ?>
 				</div>
-		 </div>
-	</div><!-- #primary -->
+		 	</div>
+
+		 <?php
+		else :
+
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif;
+		?>
+		</div>
+
 
 <?php
 get_footer();

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying grid of post. Can be used on homepage or archive pages.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -16,7 +16,7 @@
     	<a href="<?php the_permalink(); ?>">
         	<h3 class="cover-title"><?php 
         	
-        	$thetitle = $post->post_title; /* or you can use get_the_title() */
+        	$thetitle = get_the_title();
 			$getlength = strlen($thetitle);
 			$thelength = 65;
 			echo substr($thetitle, 0, $thelength);
