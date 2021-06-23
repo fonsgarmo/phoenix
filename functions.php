@@ -252,6 +252,9 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
+// ACF Display Custom Fields
+add_filter('acf/settings/remove_wp_meta_box', '__return_false');
+
 function cc_mime_types($mimes) {
  $mimes['svg'] = 'image/svg+xml';
  return $mimes;

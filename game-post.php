@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * Template to show game information on top of single posts
  * Template Name: Todo lo que debes saber
  * Template Post Type: post 
  *
@@ -27,15 +27,21 @@ get_header();
 		      <div class="row">
 		        <div class="col-lg-12">
 		          <div id="individual-content" class="post-content">
-		          	<div class="row game-info" style="background-color: #222222; height: 250px; padding: 25px 25px;">
-		          		<div class="col-lg-4 game-info-cover" style="background-color: #fff;">
-		          			
+
+		          	<div class="row game-info">
+		          		<div class="col-xl-4 col-md-4 game-info-cover d-flex align-items-center justify-content-center">
+		          			<a class="wp-block-image" href="<?php echo get_post_meta($post->ID, 'Portada del pack', true); ?>"><img class="img-fluid" src="<?php echo get_post_meta($post->ID, 'Portada del pack', true); ?>"></a>
 		          		</div>
-		          		<div class="col-lg-8 game-info-data">
-		          			<h2>Los Sims 4 Vida en el Pueblo</h2>
-		          			<h3>Pack de expansión</h3>
-		          			<p>22 de julio de 2021</p>
-		          			<a href=""><span class="game-buy-bt">Comprar en Origin</span></a>
+		          		<div class="col-xl-8 col-md-8 game-info-data">
+		          			<h2><?php echo get_post_meta($post->ID, 'Nombre del pack', true); ?></h2>
+		          			<h3><?php echo get_post_meta($post->ID, 'Tipo de pack', true); ?></h3>
+		          			<p><?php echo get_post_meta($post->ID, 'Fecha', true); ?> | <b><?php echo get_post_meta($post->ID, 'Precio', true); ?></b></p>
+		          			<div class="game-buttons">
+			          			<div class="game-buy-bt"><a href="<?php echo get_post_meta($post->ID, 'URL Origin', true); ?>">Comprar en Origin</a></div>
+			          			<div class="game-buy-bt"><a href="<?php echo get_post_meta($post->ID, 'URL Steam', true); ?>">Comprar en Steam</a></div>
+			          			<div class="game-buy-bt"><a href="<?php echo get_post_meta($post->ID, 'URL MS', true); ?>">Comprar en Microsoft Store</a></div>
+			          			<div class="game-buy-bt"><a href="<?php echo get_post_meta($post->ID, 'URL PS', true); ?>">Comprar en PS Store</a></div>
+		          			</div>
 		          		</div>
 		          	</div>
 		            <?php the_content(); ?>
@@ -93,7 +99,7 @@ get_header();
 		      <?php get_sidebar(); ?>
 		    </div>
 		  </div>
-		</div>
+		</div><!--.container principal-->
 	</section>
 
 <?php
