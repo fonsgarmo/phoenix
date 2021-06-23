@@ -982,14 +982,17 @@ img{
   }
 
   #individual-content blockquote{
+    margin-top: 35px;
     margin-left: 20px;
     margin-right: 20px;
-    padding: 5% 3%;
-    background-color: #ebebeb;
-    background-image: url(https://c2.staticflickr.com/2/1790/42546230055_724f8be795_o.png);
-    background-repeat: no-repeat;
-    background-position: middle left;
+    border-left: 5px solid #000;
+    padding: 0 2% 0 2%;
+    font-style: italic;
+  }
 
+  #individual-content blockquote cite{
+    font-weight: 700;
+    font-style: normal;
   }
 
   .comments-container{
