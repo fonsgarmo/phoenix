@@ -29,10 +29,10 @@ get_header();
 		          <div id="individual-content" class="post-content">
 
 		          	<div class="row game-info">
-		          		<div class="col-xl-4 col-md-4 game-info-cover d-flex align-items-center justify-content-center">
+		          		<div class="col-xl-4 col-md-5 game-info-cover d-flex align-items-center justify-content-center">
 		          			<a class="wp-block-image" href="<?php echo get_post_meta($post->ID, 'Portada del pack', true); ?>"><img class="img-fluid" src="<?php echo get_post_meta($post->ID, 'Portada del pack', true); ?>"></a>
 		          		</div>
-		          		<div class="col-xl-8 col-md-8 game-info-data">
+		          		<div class="col-xl-8 col-md-7 game-info-data">
 		          			<h2><?php echo get_post_meta($post->ID, 'Nombre del pack', true); ?></h2>
 		          			<h3><?php echo get_post_meta($post->ID, 'Tipo de pack', true); ?></h3>
 		          			<p><?php echo get_post_meta($post->ID, 'Fecha', true); ?> | <b><?php echo get_post_meta($post->ID, 'Precio', true); ?></b></p>
