@@ -26,8 +26,9 @@
 		'page' => 1,
 	)
 ?>
-<?php $the_query = get_posts( $args ); ?>
-<?php if ( have_posts() ){ ?>
+<?php $the_query = get_posts( $args );?>
+<?php if ( $the_query ){ ?>
+<?php global $post; ?>
 <section id="destacados-home">
 	<div class="container-fluid destacados-container">
 		<div class="row">
@@ -44,7 +45,8 @@
 				echo '<div class="row home-blog">';
 
 				    /* Loop */
-				    foreach ( $the_query as $post){
+				    foreach ( $the_query as $post) : 
+				    setup_postdata($post);
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -57,7 +59,7 @@
 
 				        $i++;
 
-				    }
+				    endforeach;
 				echo '</div>';    	
 				echo '</div>';
 		 ?>
@@ -73,12 +75,12 @@ else {
 <!-- Query noticias-->
 <?php 
 	$args = array(
-		'posts_per_page' => 9,
-		'category_name' => 'noticias',
-		'post_type' => 'post',
-		'paged' => $page,
+	'posts_per_page' => 9,
+	'category_name' => 'noticias',
+	'post_type' => 'post',
+	'paged' => $page,
 	)
-		?>
+?>
 <?php $the_query = get_posts( $args ); ?>
 <section id="news-cover">
 	<div class="container-fluid">
@@ -97,7 +99,8 @@ else {
 				echo '<div class="row home-blog">';
 
 				    /* Loop */
-				    foreach ( $the_query as $post){
+				    foreach ( $the_query as $post) : 
+				    setup_postdata($post);
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -110,7 +113,7 @@ else {
 
 				        $i++;
 
-				    }
+				    endforeach;
 				echo '</div>';    	
 				echo '</div>';
 		 ?>
@@ -118,14 +121,14 @@ else {
 		</div>
 
 <!-- Query artículos -->
-		 <?php 
+<?php 
 	$args = array(
-		'posts_per_page' => 3,
-		'category_name' => 'tutoriales',
-		'post_type' => 'post',
-		'paged' => $page,
+	'posts_per_page' => 3,
+	'category_name' => 'tutoriales',
+	'post_type' => 'post',
+	'paged' => $page,
 	)
-		 ?>
+?>
 <?php $the_query = get_posts( $args ); ?>
 		<div class="row articulos-home">
 			<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">
@@ -140,7 +143,8 @@ else {
 				echo '<div class="row articulos-home-in">';
 
 				    /* Loop */
-				    foreach ( $the_query as $post){
+				    foreach ( $the_query as $post) :
+				    setup_postdata($post);
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -153,24 +157,24 @@ else {
 
 				        $i++;
 
-				    }
+				    endforeach;
 				echo '</div>';    	
 				echo '</div>';
 		 ?>
 		 <?php wp_reset_postdata(); ?> 
-		 </div>
+		</div>
 
 <!-- Query descargas -->
-		 <?php 
-		 	$args = array(
-				'posts_per_page' => 3,
-				'category_name' => 'descargas',
-				'post_type' => 'post',
-				'paged' => $page,
-			)
-		 ?>
+<?php 
+	$args = array(
+	'posts_per_page' => 3,
+	'category_name' => 'descargas',
+	'post_type' => 'post',
+	'paged' => $page,
+	)
+?>
 		<?php $the_query = get_posts( $args ); ?>
-		 <div class="row descargas-home">
+		<div class="row descargas-home">
 			<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">
 				<h3 class="title-home-descargas">Descargas</h3>
 				<span class="more-descargas"><a href="/category/descargas/">Ver más ></a></span>
@@ -183,7 +187,8 @@ else {
 				echo '<div class="row descargas-home-in">';
 
 				    /* Loop */
-				    foreach ( $the_query as $post){
+				    foreach ( $the_query as $post) : 
+				    setup_postdata($post);
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -196,23 +201,23 @@ else {
 
 				        $i++;
 
-				    }
+				    endforeach;
 				echo '</div>';    	
 				echo '</div>';
 		 ?>
 		 <?php wp_reset_postdata(); ?> 
 
-		 </div>
+		</div>
 
 <!-- Query Sims de antaño -->
-		 <?php 
-		 	$args = array(
-				'posts_per_page' => 3,
-				'category_name' => 'sims-antano',
-				'post_type' => 'post',
-				'paged' => $page,
-			)
-		 ?>
+<?php 
+	$args = array(
+	'posts_per_page' => 3,
+	'category_name' => 'sims-antano',
+	'post_type' => 'post',
+	'paged' => $page,
+	)
+?>
 		<?php $the_query = get_posts( $args ); ?>
 		 <div class="row sda-home">
 			<div class="col-lg-12 offset-lg-0 col-xl-8 offset-xl-2">
@@ -227,7 +232,8 @@ else {
 				echo '<div class="row sda-home-in">';
 
 				    /* Loop */
-				    foreach ( $the_query as $post){
+				    foreach ( $the_query as $post) :
+				    setup_postdata($post);
 
 				        echo '<div id="post-' , the_ID(), '" ' , post_class('single-article col-md-' . 12 / $columns_num . ''), '>';
 				        //echo '<div id="post-' , the_ID(), '" class="single-article col-md-' . 12 / $columns_num . '">';
@@ -240,7 +246,7 @@ else {
 
 				        $i++;
 
-				    }
+				    endforeach;
 				echo '</div>';    	
 				echo '</div>';
 		 ?>

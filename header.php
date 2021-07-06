@@ -14,18 +14,18 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-  <link rel="preconnect" href="https://adservice.google.com/">
-  <link rel="preconnect" href="https://googleads.g.doubleclick.net/">
-  <link rel="preconnect" href="https://www.googletagservices.com/">
-  <link rel="preconnect" href="https://tpc.googlesyndication.com/">
-  <link rel="prefetch" href="https://fonts.googleapis.com/">
-  <link rel="prefetch" href="https://fonts.gstatic.com/">
-  <link rel="prefetch" href="https://googletagmanager.com/">
-  <link rel="prefetch" href="https://google-analytics.com/">
-  <link rel="prefetch" href="https://google.com/">
-  <link rel="prefetch" href="https://cdn.pekesims.com/">
-  <link rel="prefetch" href="https://youtube.com/">
-  <link rel="prefetch" href="https://twitch.com/">
+  <link rel="dns-prefetch" href="https://adservice.google.com/">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net/">
+  <link rel="dns-prefetch" href="https://www.googletagservices.com/">
+  <link rel="dns-prefetch" href="https://tpc.googlesyndication.com/">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+  <link rel="dns-prefetch" href="https://googletagmanager.com/">
+  <link rel="dns-prefetch" href="https://google-analytics.com/">
+  <link rel="dns-prefetch" href="https://google.com/">
+  <link rel="dns-prefetch" href="https://cdn.pekesims.com/">
+  <link rel="dns-prefetch" href="https://youtube.com/">
+  <link rel="dns-prefetch" href="https://twitch.com/">
   <link rel="preload" as="image" href="https://cdn.pekesims.com/wp-content/uploads/2021/06/10181315/Los-Sims-4-Vida-en-el-Pueblo-home.jpg">
   <link rel="preload" as="image" href="https://cdn.pekesims.com/wp-content/uploads/2021/06/08122746/trucos_home.jpg">
   <link rel="preload" href="/wp-content/plugins/mobile-menu/includes/css/font/mobmenu.woff2?31192480" as="font" type="font/woff2" crossorigin>
