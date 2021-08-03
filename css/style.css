@@ -79,7 +79,7 @@
  
 .has-negro-color {
     color: #000000;
-}
+}           
 
 .has-blanco-background-color {
     background-color: #ffffff;
@@ -89,10 +89,17 @@
     color: #ffffff;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  color: #292929; }
+  color: #292929;
+  overflow-x: hidden;
+
+}
 
 h1 {
   font-family: "Montserrat", sans-serif;
@@ -350,7 +357,19 @@ img{
     margin: 0;
     padding: 25px;
     top: 0;
-    left: 0; }
+    left: 0;
+    overflow-y: auto; 
+    height: 100%;
+  }
+
+@media (max-width: 767px) {
+  #header-mobile {
+    display: block;
+  }
+  #header {
+    display: none;
+  }
+}
 
 
 #footer {

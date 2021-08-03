@@ -1,34 +1,40 @@
 jQuery(document).ready(function($){
+
+    /*if ($(window).width() < 768) {
+        $('#header-mobile').removeClass('hidden');
+    }*/
+
     $('.toggler-menu').on('click', function(){
         $(this).toggleClass('active');
         $('.mobile-menu').toggleClass('open');
     });
 
-    /*if ($(window).width() >= 768) {
-        $('#header-mobile').hide();
-        $('#header').show();
-    }*/
+    
 
-    /*Mostrar u ocultar el menú móvil basado en la anchura de la ventana*/
+    /*Mostrar u ocultar el menú móvil basado en la anchura de la ventana
     $(window).resize( () => {
         let windowWd = $(window).width();
         if (windowWd < 768) {
-            $('#header-mobile').removeClass('hidden');
-            $('#header').addClass('hidden');
+            $('#header-mobile').toggleClass('hidden', false);
+            $('#header').toggleClass('hidden', true);
         } else {
-            $('#header-mobile').addClass('hidden');
-            $('#header').removeClass('hidden');
+            $('#header-mobile').toggleClass('hidden', true);
+            $('#header').toggleClass('hidden', false);
         }
-    });
+    });*/
 
     $('.mobile-menu-button').on('click', () => {
-        $('.mobile-menu-wrapper').show();
-        $('.mobile-menu-overlay').show();
+        $('.mobile-menu-wrapper').toggleClass('hidden');
+        $('.mobile-menu-overlay').toggleClass('hidden');
+        $('body').css({'overflow-y': 'hidden'});
+        $('html').css({'overflow-y': 'hidden'});
     });
 
     $('.close-menu-button').on('click', () => {
-        $('.mobile-menu-wrapper').hide();
-        $('.mobile-menu-overlay').hide();
+        $('.mobile-menu-wrapper').toggleClass('hidden');
+        $('.mobile-menu-overlay').toggleClass('hidden');
+        $('body').css({'overflow-y': ''});
+        $('html').css({'overflow-y': ''});
     });
 
     $('.search-icon').on('click', function(){
@@ -38,4 +44,5 @@ jQuery(document).ready(function($){
     $('.search-close').on('click', function(){
         $('#header-search-row').removeClass('show-search');
     });
+
 });
