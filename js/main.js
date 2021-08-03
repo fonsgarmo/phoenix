@@ -4,16 +4,31 @@ jQuery(document).ready(function($){
         $('.mobile-menu').toggleClass('open');
     });
 
+    /*if ($(window).width() >= 768) {
+        $('#header-mobile').hide();
+        $('#header').show();
+    }*/
+
     /*Mostrar u ocultar el menú móvil basado en la anchura de la ventana*/
     $(window).resize( () => {
         let windowWd = $(window).width();
         if (windowWd < 768) {
-            $('#header-mobile').show();
-            $('#header').hide();
+            $('#header-mobile').removeClass('hidden');
+            $('#header').addClass('hidden');
         } else {
-            $('#header-mobile').hide();
-            $('#header').show();
+            $('#header-mobile').addClass('hidden');
+            $('#header').removeClass('hidden');
         }
+    });
+
+    $('.mobile-menu-button').on('click', () => {
+        $('.mobile-menu-wrapper').show();
+        $('.mobile-menu-overlay').show();
+    });
+
+    $('.close-menu-button').on('click', () => {
+        $('.mobile-menu-wrapper').hide();
+        $('.mobile-menu-overlay').hide();
     });
 
     $('.search-icon').on('click', function(){

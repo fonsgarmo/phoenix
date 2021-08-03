@@ -59,19 +59,29 @@
           </div>
         <div class="row" id="menu-header-row">
         	<div class="col-12" id="menu-wrapper">
-	            <?php
-					wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'main-menu'
-					) );
-				?>
+            <?php
+    					wp_nav_menu( array(
+    					'theme_location' => 'menu-1',
+    					'menu_id'        => 'main-menu'
+    					) );
+				    ?>
           </div>
         </div>
           <div class="col-md-1 d-none">
             <p class="search-icon text-center"><a href="#"><i class="icon-magnifier"></i></a></p>
           </div>
         </div>
-        <div class="container-fluid" id="header-mobile">
+        <div class="container-fluid hidden" id="header-mobile">
+          <div class="mobile-menu-overlay hidden"></div>
+          <div class="mobile-menu-wrapper hidden">
+            <span class="close-menu-button"><a href="#">CLOSE</a></span>            
+            <?php
+              wp_nav_menu( array(
+              'theme_location' => 'menu-1',
+              'menu_id'        => 'main-menu'
+              ) );
+            ?>
+          </div>
           <div class="row" id="header-mobile-row">
             <div class="col-2">
               <img class="mobile-menu-button img-fluid" src="wp-content/themes/Phoenix/images/menu-icon.png" alt="Icono de menú">
