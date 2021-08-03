@@ -57,7 +57,7 @@
 			?>
         	<div class="col-12" id="logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php _e('Isotipo de pekesims', 'phoenix'); ?>"/></a></div>
           </div>
-          <div class="row" id="menu-header-row">
+        <div class="row" id="menu-header-row">
         	<div class="col-12" id="menu-wrapper">
 	            <?php
 					wp_nav_menu( array(
@@ -66,9 +66,17 @@
 					) );
 				?>
           </div>
-          </div>
+        </div>
           <div class="col-md-1 d-none">
             <p class="search-icon text-center"><a href="#"><i class="icon-magnifier"></i></a></p>
+          </div>
+        </div>
+        <div class="container-fluid" id="header-mobile">
+          <div class="row" id="header-mobile-row">
+            <div class="col-2">
+              <img class="mobile-menu-button img-fluid" src="wp-content/themes/Phoenix/images/menu-icon.png" alt="Icono de menú">
+            </div>
+            <div class="col-8" id="mobile-logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid mobile-header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php _e('Isotipo de pekesims', 'phoenix'); ?>"/></a></div>
           </div>
         </div>
         <div class="" id="header-search-row">
