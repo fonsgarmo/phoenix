@@ -87,7 +87,7 @@
           </div>
           <div class="row" id="header-mobile-row">
             <div class="col-2">
-              <img class="mobile-menu-button img-fluid" src="wp-content/themes/Phoenix/images/menu-icon.png" alt="Icono de menú">
+              <img class="mobile-menu-button img-fluid" src="https://cdn.pekesims.com/static/menu-icon.png" alt="Icono de menú">
             </div>
             <div class="col-8" id="mobile-logo-wrapper"><a href="<?php echo get_site_url(); ?>"><img class="img-fluid mobile-header-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php _e('Isotipo de pekesims', 'phoenix'); ?>"/></a></div>
           </div>

@@ -1,28 +1,18 @@
-jQuery(document).ready(function($){
+/*
+------------------------
+Phoenix - Scripts
+Versión 2.2
+------------------------
+*/
 
-    /*if ($(window).width() < 768) {
-        $('#header-mobile').removeClass('hidden');
-    }*/
+jQuery(document).ready(function($){
 
     $('.toggler-menu').on('click', function(){
         $(this).toggleClass('active');
         $('.mobile-menu').toggleClass('open');
     });
 
-    
-
-    /*Mostrar u ocultar el menú móvil basado en la anchura de la ventana
-    $(window).resize( () => {
-        let windowWd = $(window).width();
-        if (windowWd < 768) {
-            $('#header-mobile').toggleClass('hidden', false);
-            $('#header').toggleClass('hidden', true);
-        } else {
-            $('#header-mobile').toggleClass('hidden', true);
-            $('#header').toggleClass('hidden', false);
-        }
-    });*/
-
+    //Clic en el botón de menú de hamburguesa
     $('.mobile-menu-button').on('click', () => {
         $('.mobile-menu-wrapper').toggleClass('hidden');
         $('.mobile-menu-overlay').toggleClass('hidden');
@@ -30,6 +20,7 @@ jQuery(document).ready(function($){
         $('html').css({'overflow-y': 'hidden'});
     });
 
+    //Clic en el botón de cerrar del mení
     $('.close-menu-wrapper').on('click', () => {
         $('.mobile-menu-wrapper').toggleClass('hidden');
         $('.mobile-menu-overlay').toggleClass('hidden');
@@ -37,26 +28,26 @@ jQuery(document).ready(function($){
         $('html').css({'overflow-y': ''});
     });
 
+    //Icono de flecha añadido después de cada item del menú de móvil con hijos
     $('#mobile-menu > .menu-item-has-children > a').after('<div class="mobile-menu-arrow icon-arrow-down"></div>');
-    $('.sub-menu > .menu-item-has-children > a').after('<div class="mobile-menu-arrow icon-arrow-down"></div>');
+    $('#mobile-menu .sub-menu > .menu-item-has-children > a').after('<div class="mobile-menu-arrow icon-arrow-down"></div>');
 
     /*$('.menu-item-has-children > a').on('click', event => {
         $(event.currentTarget).parent().find('.sub-menu').toggle();
     });*/
 
+    //Abrir y cerrar submenús, cambiar el icono de la flecha
     $('.mobile-menu-arrow').on('click', event => {
-        $(event.currentTarget).parent().find('.sub-menu').toggle();
+        $(event.currentTarget).parent().children('.sub-menu').toggle();
         $(event.currentTarget).toggleClass('icon-arrow-up');
     });
 
-    /*$('#mobile-menu .sub-menu > .menu-item-has-children').on('click', event => {
-        $(event.currentTarget).children('.sub-menu').toggle();
-    });*/
-
+    //Abrir ventana de búsqueda en desktop
     $('.search-icon').on('click', function(){
         $('#header-search-row').addClass('show-search');
     });
 
+    //Cerrar ventana de búsqueda en desktop
     $('.search-close').on('click', function(){
         $('#header-search-row').removeClass('show-search');
     });
