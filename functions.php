@@ -45,6 +45,7 @@ if ( ! function_exists( 'phoenix_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Main Menu', 'phoenix' ),
+			'menu-mobile' => 'Menú móvil',
 		) );
 
 		/*
@@ -173,11 +174,11 @@ add_action( 'widgets_init', 'phoenix_widgets_init' );
  */
 function phoenix_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap/bootstrap.css');
-	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', '', '2.1.1');
+	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', '', '2.2');
 	wp_enqueue_style( 'line-icons', get_template_directory_uri() . '/css/simple-line-icons.css');
 
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', '', '', true);
-	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', '', '2.1.1', true);
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', '', '2.2', true);
 
 
 

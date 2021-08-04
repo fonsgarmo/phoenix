@@ -74,13 +74,16 @@
         <div class="container-fluid hidden" id="header-mobile">
           <div class="mobile-menu-overlay hidden"></div>
           <div class="mobile-menu-wrapper hidden">
-            <span class="close-menu-button"><a href="#">CLOSE</a></span>            
+            <div class="close-menu-wrapper">
+              <i class="icon-close"></i>
+            </div>            
             <?php
               wp_nav_menu( array(
-              'theme_location' => 'menu-1',
-              'menu_id'        => 'main-menu'
+              'theme_location' => 'menu-mobile',
+              'menu_id'        => 'mobile-menu'
               ) );
             ?>
+            <div id="seach-mobile"><?php get_search_form(); ?></div>
           </div>
           <div class="row" id="header-mobile-row">
             <div class="col-2">
