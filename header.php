@@ -71,10 +71,11 @@
             <p class="search-icon text-center"><a href="#"><i class="icon-magnifier"></i></a></p>
           </div>
         </div>
-        <div class="container-fluid hidden" id="header-mobile">
-          <div class="mobile-menu-overlay hidden"></div>
-          <div class="mobile-menu-wrapper hidden">
+        <div class="container-fluid" id="header-mobile">
+          <div class="mobile-menu-overlay"></div>
+          <div class="mobile-menu-wrapper">
             <div class="close-menu-wrapper">
+              <h3>Menú</h3>
               <i class="icon-close"></i>
             </div>            
             <?php
@@ -84,6 +85,13 @@
               ) );
             ?>
             <div id="seach-mobile"><?php get_search_form(); ?></div>
+            <?php while ( have_rows( 'links_sociales', 'option' ) ) : the_row(); ?>
+            <ul class="social-icons-mobile">
+              <a href="<?php the_sub_field( 'twitter_footer' ); ?>"><li class="icon-social-twitter"></li></a>
+              <a href="<?php the_sub_field( 'facebook_footer' ); ?>"><li class="icon-social-facebook"></li></a>
+              <a href="<?php the_sub_field( 'youtube_footer' ); ?>"><li class="icon-social-youtube"></li></a>
+            </ul>
+            <?php endwhile;?>
           </div>
           <div class="row" id="header-mobile-row">
             <div class="col-2">

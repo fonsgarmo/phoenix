@@ -1,7 +1,7 @@
 /*
 ------------------------
 Phoenix - Scripts
-Versión 2.2
+Version 2.2
 ------------------------
 */
 
@@ -14,16 +14,18 @@ jQuery(document).ready(function($){
 
     //Clic en el botón de menú de hamburguesa
     $('.mobile-menu-button').on('click', () => {
-        $('.mobile-menu-wrapper').toggleClass('hidden');
-        $('.mobile-menu-overlay').toggleClass('hidden');
+        //$('.mobile-menu-wrapper').toggleClass('hidden');
+        $('.mobile-menu-wrapper').animate({left: 0}, 300);
+        $('.mobile-menu-overlay').show();
         $('body').css({'overflow-y': 'hidden'});
         $('html').css({'overflow-y': 'hidden'});
     });
 
     //Clic en el botón de cerrar del mení
     $('.close-menu-wrapper').on('click', () => {
-        $('.mobile-menu-wrapper').toggleClass('hidden');
-        $('.mobile-menu-overlay').toggleClass('hidden');
+        //$('.mobile-menu-wrapper').toggleClass('hidden');
+        $('.mobile-menu-wrapper').animate({left: '-650px'}, 300);
+        $('.mobile-menu-overlay').hide();
         $('body').css({'overflow-y': ''});
         $('html').css({'overflow-y': ''});
     });
