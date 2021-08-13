@@ -28,6 +28,36 @@
             <span><?php _e('Publicado en: ', 'phoenix'); ?> <?php the_category(', '); ?></span>
           </div>
 
+          <!--Post navigation-->
+          <div class="row single-navigation text-center">
+            <div class="col-md-6 navigation-next-post">
+            <?php if (get_next_post() !== ''):  
+                $post_title = get_next_post()->post_title;
+                $post_id = get_next_post()->ID;
+              ?>
+              <a href="<?php echo get_permalink(get_next_post()) ?>"><img class="img-fluid" src="<?php echo get_the_post_thumbnail_url($post_id); ?>"></a>
+              <?php
+                if (strlen($post_title) > 65) 
+                  $post_title = substr($post_title, 0, 65).'...';
+                next_post_link('%link', '<i class="icon-arrow-left"></i> '.$post_title);
+              endif;
+              ?>
+            </div>
+            <div class="col-md-6 navigation-prev-post">
+            <?php if (get_previous_post() !== ''): 
+                $post_title = get_previous_post()->post_title;
+              ?>
+              <a href="<?php echo get_permalink(get_previous_post()) ?>"><img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(get_previous_post()); ?>"></a>
+              <?php
+                if (strlen($post_title) > 65)
+                  $post_title = substr($post_title, 0, 65).'...';
+                previous_post_link('%link', $post_title.' <i class="icon-arrow-right"></i>');
+              endif;
+              ?>
+            </div>
+          </div>
+          <!--End post navigation-->
+
           <div class="row" id="author-info">
             <div class="col-lg-2 col-md-2 col-12 text-center d-flex align-items-center justify-content-center" id="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 96 ); ?></div>
               <div class="col-lg-10 col-md-10 col-12" id="author-details">

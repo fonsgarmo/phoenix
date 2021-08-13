@@ -853,7 +853,7 @@ img{
     border-left: 3px solid #00AFF1;
     background: #fcfcfc;
     padding: 10px 10px;
-    float: left;
+    /*float: left;*/
     z-index: 10;
     left: 100%;
     top: auto;
@@ -1213,6 +1213,39 @@ img{
     font-weight: bold;
     margin-right: 10px;
   }
+
+  .single-navigation {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-top: 1px solid #e0e0e0;}
+      .single-navigation img{
+        transition: 0.5s;
+        margin: 15px 0;
+        border-radius: 15px; }
+      .single-navigation a{
+        font-size: 15px;
+        font-weight: 800;
+        text-transform: uppercase; }
+          .single-navigation a i {
+            font-weight: 800; }
+  .navigation-shadow{
+    box-shadow: 8px 9px 20px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .navigation-next-post {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  @media (max-width: 767px) {
+    .navigation-next-post {
+      border-right: 0;
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+    }
+
+  }
+
 
   /*Game post*/
 

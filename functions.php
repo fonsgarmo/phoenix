@@ -174,11 +174,11 @@ add_action( 'widgets_init', 'phoenix_widgets_init' );
  */
 function phoenix_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap/bootstrap.css');
-	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', '', '2.2');
+	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/style.css', '', '2.2.1');
 	wp_enqueue_style( 'line-icons', get_template_directory_uri() . '/css/simple-line-icons.css');
 
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', '', '', true);
-	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', '', '2.2', true);
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', '', '2.2.1', true);
 
 
 
@@ -285,26 +285,3 @@ function custom_sidebars() {
 
 }
 add_action( 'widgets_init', 'custom_sidebars' );
-
-// Register searchforms
-
-function wpdocs_my_search_form( $form ) {
-    $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <div>
-    <input class="form-control" placeholder="' .__('Buscar...','phoenix'). '" type="text" value="' . get_search_query() . '" name="s" id="s" />
-    </div>
-    </form>';
- 
-    return $form;
-}
-add_filter( 'get_search_form', 'wpdocs_my_search_form' );
-
-function mobile_search_form( $form ) {
-    $form = '<form role="search" method="get" id="searchform-mobile" class="searchform" action="' . home_url( '/' ) . '" >
-    <div>
-    <input class="form-control" placeholder="' .__('Buscar...','phoenix'). '" type="text" value="' . get_search_query() . '" name="s" id="s" />
-    </div>
-    </form>';
- 
-    return $form;
-}

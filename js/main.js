@@ -14,7 +14,6 @@ jQuery(document).ready(function($){
 
     //Clic en el botón de menú de hamburguesa
     $('.mobile-menu-button').on('click', () => {
-        //$('.mobile-menu-wrapper').toggleClass('hidden');
         $('.mobile-menu-wrapper').animate({left: 0}, 300);
         $('.mobile-menu-overlay').show();
         $('body').css({'overflow-y': 'hidden'});
@@ -23,7 +22,6 @@ jQuery(document).ready(function($){
 
     //Clic en el botón de cerrar del mení
     $('.close-menu-wrapper').on('click', () => {
-        //$('.mobile-menu-wrapper').toggleClass('hidden');
         $('.mobile-menu-wrapper').animate({left: '-650px'}, 300);
         $('.mobile-menu-overlay').hide();
         $('body').css({'overflow-y': ''});
@@ -33,10 +31,6 @@ jQuery(document).ready(function($){
     //Icono de flecha añadido después de cada item del menú de móvil con hijos
     $('#mobile-menu > .menu-item-has-children > a').after('<div class="mobile-menu-arrow icon-arrow-down"></div>');
     $('#mobile-menu .sub-menu > .menu-item-has-children > a').after('<div class="mobile-menu-arrow icon-arrow-down"></div>');
-
-    /*$('.menu-item-has-children > a').on('click', event => {
-        $(event.currentTarget).parent().find('.sub-menu').toggle();
-    });*/
 
     //Abrir y cerrar submenús, cambiar el icono de la flecha
     $('.mobile-menu-arrow').on('click', event => {
@@ -54,4 +48,15 @@ jQuery(document).ready(function($){
         $('#header-search-row').removeClass('show-search');
     });
 
+    $('.navigation-next-post').hover( () =>{
+        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(-6px) translateX(-6px)'}, 500).addClass('navigation-shadow');
+    }, () =>{
+        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(0px) translateX(0px)'}, 500).removeClass('navigation-shadow');
+    }).fadeIn(250);
+
+    $('.navigation-prev-post').hover( () =>{
+        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(-6px) translateX(-6px)'}, 500).addClass('navigation-shadow');
+    }, () =>{
+        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(0px) translateX(0px)'}, 500).removeClass('navigation-shadow');
+    }).fadeIn(250);
 });
