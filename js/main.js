@@ -7,6 +7,8 @@ Version 2.2
 
 jQuery(document).ready(function($){
 
+    $('body').addClass('dark-mode');
+
     $('.toggler-menu').on('click', function(){
         $(this).toggleClass('active');
         $('.mobile-menu').toggleClass('open');
