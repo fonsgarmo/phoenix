@@ -128,12 +128,37 @@ body.dark-mode {
   body.dark-mode .sda-home{
     background-image: none;
     background-color: transparent;}
+  /*Archive styles*/
   body.dark-mode .archive-title-container{
     background-color: #000;
     background-image: none;}
+  /*Single posts styles*/
   body.dark-mode .phoenix-sidebar{
-    background-color: transparent;
+    background-color: transparent;}
+  body.dark-mode .indicates-required{
+    color: #fff;}
+  body.dark-mode .mc-field-group label{
+    color: #fff}
+  body.dark-mode .rpwe-block li{
+    border-bottom: 1px solid #3e3e3e;}
+  body.dark-mode .post-title-container{
+    background-image: none;
+    background-color: #000;}
+  body.dark-mode .single-categories span{
+    background-color: #000;}
+  body.dark-mode .single-navigation{
+    border-top: 1px solid #3e3e3e;}
+  body.dark-mode .navigation-next-post{
+    border-right: 1px solid #3e3e3e;}
+  body.dark-mode #author-info{
+    border-color: #000;
+    background-color: #1d1d1d;}
+  body.dark-mode .author-description{
+    border-bottom: 1px solid #3e3e3e;}
+  body.dark-mode .comments-container{
+    background-color: #000;
   }
+
 
 h1 {
   font-family: "Montserrat", sans-serif;
