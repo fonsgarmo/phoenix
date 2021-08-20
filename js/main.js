@@ -54,11 +54,11 @@ jQuery(document).ready(function($){
         $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(-6px) translateX(-6px)'}, 500).addClass('navigation-shadow');
     }, () =>{
         $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(0px) translateX(0px)'}, 500).removeClass('navigation-shadow');
-    }).fadeIn(250);
+    });
 
     $('.navigation-prev-post').hover( () =>{
         $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(-6px) translateX(-6px)'}, 500).addClass('navigation-shadow');
     }, () =>{
         $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(0px) translateX(0px)'}, 500).removeClass('navigation-shadow');
-    }).fadeIn(250);
+    });
 });

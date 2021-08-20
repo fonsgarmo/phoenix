@@ -156,7 +156,15 @@ body.dark-mode {
   body.dark-mode .author-description{
     border-bottom: 1px solid #3e3e3e;}
   body.dark-mode .comments-container{
-    background-color: #000;
+    background-color: #000;}
+  body.dark-mode figcaption{
+    color: #fff;}
+  body.dark-mode cite{
+    color: #fff;}
+  body.dark-mode li{
+    color: #fff;}
+  body.dark-mode .navigation-shadow{
+    box-shadow: 8px 9px 20px 0px rgba(194, 194, 194, 0.25);
   }
 
 
