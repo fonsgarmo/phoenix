@@ -1,13 +1,23 @@
 /*
 ------------------------
 Phoenix - Scripts
-Version 2.2
+Version 2.3
 ------------------------
 */
 
 jQuery(document).ready(function($){
 
-    $('body').addClass('dark-mode');
+    //Selector de modo oscuro y cookie para almacenar ajuste de usuario 
+    $('.mode-icon').on('click', () => {
+        $('body').toggleClass('dark-mode');
+        let theme;
+        if ($('body').hasClass('dark-mode')){
+            theme = 'dark-mode';
+        } else {
+            theme = 'light-mode';
+        }
+        document.cookie = `theme=${theme};path=/;max-age = 31536000`;
+    })
 
     $('.toggler-menu').on('click', function(){
         $(this).toggleClass('active');
