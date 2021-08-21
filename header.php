@@ -28,7 +28,6 @@
   <link rel="dns-prefetch" href="https://twitch.com/">
   <link rel="preload" as="image" href="https://cdn.pekesims.com/wp-content/uploads/2021/06/10181315/Los-Sims-4-Vida-en-el-Pueblo-home.jpg">
   <link rel="preload" as="image" href="https://cdn.pekesims.com/wp-content/uploads/2021/06/08122746/trucos_home.jpg">
-  <link rel="preload" href="/wp-content/plugins/mobile-menu/includes/css/font/mobmenu.woff2?31192480" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/wp-content/themes/Phoenix/fonts/Simple-Line-Icons.woff2?v=2.4.0" as="font" type="font/woff2" crossorigin>
   
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -37,7 +36,19 @@
 
 	<?php wp_head(); ?>
 </head>
-<body>
+
+<?php 
+  $themeClass = '';
+  if (!empty($_COOKIE['theme'])) {
+    if ($_COOKIE['theme'] == 'dark-mode') {
+      $themeClass = 'dark-mode';
+    } else if ($_COOKIE['theme'] == 'light-mode') {
+      $themeClass = '';
+    }  
+  }
+?>
+
+<body class="<?php echo $themeClass; ?>">
 
   <?php if ( get_field( 'pre-header_activo' ) == 1 ) { ?> 
      <div class="container-fluid" id="pre-header">
@@ -85,6 +96,9 @@
               ) );
             ?>
             <div id="seach-mobile"><?php get_search_form(); ?></div>
+            <div id="theme-mode-mobile">
+              <i class="icon-bulb mode-icon"></i>
+            </div>
             <?php while ( have_rows( 'links_sociales', 'option' ) ) : the_row(); ?>
             <ul class="social-icons-mobile">
               <a href="<?php the_sub_field( 'twitter_footer' ); ?>"><li class="icon-social-twitter"></li></a>

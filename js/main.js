@@ -1,11 +1,49 @@
 /*
 ------------------------
 Phoenix - Scripts
-Version 2.2
+Version 2.3
 ------------------------
 */
 
+const cookieExists = cookieName => {
+    const name = cookieName + '=';
+    const decodedCookies = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookies.split('; ');
+    let cookieFound = false;
+    cookieArray.forEach(cookie => {
+        if (cookie.indexOf(name) === 0) {
+            cookieFound = true;
+        }
+    });
+    return cookieFound;
+}
+
 jQuery(document).ready(function($){
+
+    //Detectar modo oscuro y activarlo
+    let themeCookieExists = cookieExists('theme');
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && themeCookieExists === false){
+        $('body').addClass('dark-mode');
+    }
+
+    //Detectar cambio en preferencias del sistema en cuanto a modo oscuro
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (themeCookieExists === false){
+            $('body').toggleClass('dark-mode');
+        }
+    })
+
+    //Selector manual de modo oscuro y cookie para almacenar ajuste de usuario 
+    $('.mode-icon').on('click', () => {
+        $('body').toggleClass('dark-mode');
+        let theme;
+        if ($('body').hasClass('dark-mode')){
+            theme = 'dark-mode';
+        } else {
+            theme = 'light-mode';
+        }
+        document.cookie = `theme=${theme};path=/;max-age = 31536000`;
+    })
 
     $('.toggler-menu').on('click', function(){
         $(this).toggleClass('active');
@@ -49,14 +87,14 @@ jQuery(document).ready(function($){
     });
 
     $('.navigation-next-post').hover( () =>{
-        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(-6px) translateX(-6px)'}, 500).addClass('navigation-shadow');
+        $(event.currentTarget).find('a').find('img').addClass('navigation-shadow');
     }, () =>{
-        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(0px) translateX(0px)'}, 500).removeClass('navigation-shadow');
-    }).fadeIn(250);
+        $(event.currentTarget).find('a').find('img').removeClass('navigation-shadow');
+    });
 
     $('.navigation-prev-post').hover( () =>{
-        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(-6px) translateX(-6px)'}, 500).addClass('navigation-shadow');
+        $(event.currentTarget).find('a').find('img').addClass('navigation-shadow');
     }, () =>{
-        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(0px) translateX(0px)'}, 500).removeClass('navigation-shadow');
-    }).fadeIn(250);
+        $(event.currentTarget).find('a').find('img').removeClass('navigation-shadow');
+    });
 });
