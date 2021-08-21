@@ -21,7 +21,7 @@ const cookieExists = cookieName => {
 jQuery(document).ready(function($){
 
     //Detectar modo oscuro y activarlo
-    let themeCookieExists = cookieExists('theme');
+    let themeCookieExists = cookieExists('phoenix_theme');
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && themeCookieExists === false){
         $('body').addClass('dark-mode');
     }
@@ -42,7 +42,7 @@ jQuery(document).ready(function($){
         } else {
             theme = 'light-mode';
         }
-        document.cookie = `theme=${theme};path=/;max-age = 31536000`;
+        document.cookie = `phoenix_theme=${theme};path=/;max-age = 31536000`;
     })
 
     $('.toggler-menu').on('click', function(){

@@ -39,10 +39,10 @@
 
 <?php 
   $themeClass = '';
-  if (!empty($_COOKIE['theme'])) {
-    if ($_COOKIE['theme'] == 'dark-mode') {
+  if (!empty($_COOKIE['phoenix_theme'])) {
+    if ($_COOKIE['phoenix_theme'] == 'dark-mode') {
       $themeClass = 'dark-mode';
-    } else if ($_COOKIE['theme'] == 'light-mode') {
+    } else if ($_COOKIE['phoenix_theme'] == 'light-mode') {
       $themeClass = '';
     }  
   }
