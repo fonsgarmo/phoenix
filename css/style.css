@@ -171,6 +171,8 @@ body.dark-mode {
     background-color: #1d1d1d;}
   body.dark-mode .author-description{
     border-bottom: 1px solid #3e3e3e;}
+  body.dark-mode .twitch-icon{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(137deg) brightness(100%) contrast(103%);}
   body.dark-mode .comments-container{
     background-color: #000;}
   body.dark-mode figcaption{
@@ -552,6 +554,12 @@ img{
   #mobile-menu > .menu-item-has-children > .sub-menu > .menu-item-has-children > .mobile-menu-arrow {
     color: #fff;
   }
+
+  #theme-mode-mobile{
+    margin: 25px 0;
+    font-size: 35px;
+    text-align: center;}
+
 
 @media (max-width: 767px) {
   #header-mobile {
@@ -995,6 +1003,10 @@ img{
     cursor: pointer;
   }
 
+  .mode-icon:hover{
+    cursor: pointer;
+  }
+
   .search-close{
     font-size: 30px;
     margin-top: 15px;
@@ -1304,6 +1316,11 @@ img{
     font-size: 25px;
     font-weight: bold;
     margin-right: 10px;
+  }
+
+  .twitch-icon{
+    height: 25px;
+    width: auto;
   }
 
   .single-navigation {

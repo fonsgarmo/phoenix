@@ -43,7 +43,7 @@
     if ($_COOKIE['theme'] == 'dark-mode') {
       $themeClass = 'dark-mode';
     } else if ($_COOKIE['theme'] == 'light-mode') {
-      $themeClass = 'light-mode';
+      $themeClass = '';
     }  
   }
 ?>
@@ -96,6 +96,9 @@
               ) );
             ?>
             <div id="seach-mobile"><?php get_search_form(); ?></div>
+            <div id="theme-mode-mobile">
+              <i class="icon-bulb mode-icon"></i>
+            </div>
             <?php while ( have_rows( 'links_sociales', 'option' ) ) : the_row(); ?>
             <ul class="social-icons-mobile">
               <a href="<?php the_sub_field( 'twitter_footer' ); ?>"><li class="icon-social-twitter"></li></a>

@@ -5,9 +5,35 @@ Version 2.3
 ------------------------
 */
 
+const cookieExists = cookieName => {
+    const name = cookieName + '=';
+    const decodedCookies = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookies.split('; ');
+    let cookieFound = false;
+    cookieArray.forEach(cookie => {
+        if (cookie.indexOf(name) === 0) {
+            cookieFound = true;
+        }
+    });
+    return cookieFound;
+}
+
 jQuery(document).ready(function($){
 
-    //Selector de modo oscuro y cookie para almacenar ajuste de usuario 
+    //Detectar modo oscuro y activarlo
+    let themeCookieExists = cookieExists('theme');
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && themeCookieExists === false){
+        $('body').addClass('dark-mode');
+    }
+
+    //Detectar cambio en preferencias del sistema en cuanto a modo oscuro
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (themeCookieExists === false){
+            $('body').toggleClass('dark-mode');
+        }
+    })
+
+    //Selector manual de modo oscuro y cookie para almacenar ajuste de usuario 
     $('.mode-icon').on('click', () => {
         $('body').toggleClass('dark-mode');
         let theme;
