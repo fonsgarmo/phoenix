@@ -87,14 +87,14 @@ jQuery(document).ready(function($){
     });
 
     $('.navigation-next-post').hover( () =>{
-        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(-6px) translateX(-6px)'}, 500).addClass('navigation-shadow');
+        $(event.currentTarget).find('a').find('img').addClass('navigation-shadow');
     }, () =>{
-        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(0px) translateX(0px)'}, 500).removeClass('navigation-shadow');
+        $(event.currentTarget).find('a').find('img').removeClass('navigation-shadow');
     });
 
     $('.navigation-prev-post').hover( () =>{
-        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(-6px) translateX(-6px)'}, 500).addClass('navigation-shadow');
+        $(event.currentTarget).find('a').find('img').addClass('navigation-shadow');
     }, () =>{
-        $(event.currentTarget).find('a').find('img').css({'transform': 'translateY(0px) translateX(0px)'}, 500).removeClass('navigation-shadow');
+        $(event.currentTarget).find('a').find('img').removeClass('navigation-shadow');
     });
 });

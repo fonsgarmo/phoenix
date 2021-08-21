@@ -105,7 +105,9 @@ body.dark-mode {
   background-color: #1d1d1d;}
   body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5 {
     color: #fff !important;}
-  body.dark-mode p, body.dark-mode span, body.dark-mode a, body.dark-mode em, body.dark-mode i, body.dark-mode strong{
+  body.dark-mode .dataTables_wrapper p, body.dark-mode .dataTables_wrapper b, body.dark-mode .dataTables_wrapper i, body.dark-mode .dataTables_wrapper strong, body.dark-mode .dataTables_wrapper em{
+    color: #000 !important;}
+  body.dark-mode p, body.dark-mode span, body.dark-mode a, body.dark-mode em, body.dark-mode i, body.dark-mode strong, body.dark-mode b{
     color: #fff !important;}
   body.dark-mode #header{
     background-color: transparent;}
@@ -127,6 +129,9 @@ body.dark-mode {
     background-color: #000000;}
   body.dark-mode #menu-wrapper ul li .sub-menu {
     background: #131313;}
+  body.dark-mode #main-menu .current-menu-item > a{
+    color: #ef58aa !important;
+  }
     body.dark-mode #menu-wrapper ul li .sub-menu li .sub-menu {
       background: #131313;}
   body.dark-mode .home-strip{
@@ -182,7 +187,13 @@ body.dark-mode {
   body.dark-mode li{
     color: #fff;}
   body.dark-mode .navigation-shadow{
-    box-shadow: 8px 9px 20px 0px rgba(194, 194, 194, 0.25);}
+    transform: translateY(-6px) translateX(-6px) ;
+    box-shadow: 8px 9px 20px 0px rgba(53, 53, 53, 0.25);
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;}
   body.dark-mode .game-info{
     background-color: #000;}
   body.dark-mode .game-buy-bt{
@@ -1338,7 +1349,13 @@ img{
           .single-navigation a i {
             font-weight: 800; }
   .navigation-shadow{
+    transform: translateY(-6px) translateX(-6px);
     box-shadow: 8px 9px 20px 0px rgba(0, 0, 0, 0.25);
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
   }
 
   .navigation-next-post {
