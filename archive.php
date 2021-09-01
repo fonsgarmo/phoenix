@@ -13,7 +13,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
 	<section id="archive">
 		<div class="container-fluid archive-title-container">
@@ -74,8 +74,7 @@ get_header();
 	</div>
 </section>
 
-		<?php endif;
-		?>
+	<?php endif;?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
