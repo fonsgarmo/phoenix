@@ -285,3 +285,5 @@ function custom_sidebars() {
 
 }
 add_action( 'widgets_init', 'custom_sidebars' );
+
+add_image_size('featured-image', 720, 400, true);

@@ -9,7 +9,7 @@
 
 ?>
     <div class="img-fluid cover-pic">
-        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('post-pic'); ?></a>
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('featured-image'); ?></a>
     </div>
     <div class="grid-title-module">
         <h4 class="cover-date"><?php echo get_the_date('d.m.Y') ?> | <strong><?php _e('Por', 'phoenix'); ?> </strong><?php the_author(); ?></h4>
